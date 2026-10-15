@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/YOUR_REPOSITORY
+  repo: sydmoyo-ai/sydney-moyo-website
   branch: main
   # GitHub OAuth authentication requires a compatible OAuth provider.
   # Configure base_url and auth_endpoint when you have set one up.
