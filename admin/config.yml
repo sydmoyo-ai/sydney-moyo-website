@@ -17,7 +17,7 @@ collections:
     files:
       - label: "Homepage"
         name: "home"
-        file: "content/home.json"
+        file: "home.json"
         fields:
           - {label: "Headline", name: "headline", widget: "string"}
           - {label: "Intro", name: "intro", widget: "text"}
@@ -27,19 +27,19 @@ collections:
           - {label: "Welcome image", name: "welcome_image", widget: "image", required: false}
       - label: "About"
         name: "about"
-        file: "content/about.json"
+        file: "about.json"
         fields:
           - {label: "Page heading", name: "heading", widget: "string"}
           - {label: "Page text", name: "body", widget: "text"}
       - label: "Teaching"
         name: "teaching"
-        file: "content/teaching.json"
+        file: "teaching.json"
         fields:
           - {label: "Page heading", name: "heading", widget: "string"}
           - {label: "Page text", name: "body", widget: "text"}
       - label: "Contact"
         name: "contact"
-        file: "content/contact.json"
+        file: "contact.json"
         fields:
           - {label: "Page heading", name: "heading", widget: "string"}
           - {label: "Page text", name: "body", widget: "text"}
@@ -49,7 +49,7 @@ collections:
     files:
       - label: "Projects"
         name: "projects"
-        file: "content/research.json"
+        file: "research.json"
         fields:
           - {label: "Page heading", name: "heading", widget: "string"}
           - {label: "Page introduction", name: "body", widget: "text"}
@@ -65,7 +65,7 @@ collections:
     files:
       - label: "Publication list"
         name: "list"
-        file: "content/publications.json"
+        file: "publications.json"
         fields:
           - {label: "Page heading", name: "heading", widget: "string"}
           - {label: "Introduction", name: "body", widget: "text"}
@@ -83,7 +83,7 @@ collections:
     files:
       - label: "People"
         name: "list"
-        file: "content/people.json"
+        file: "people.json"
         fields:
           - {label: "Page heading", name: "heading", widget: "string"}
           - {label: "Introduction", name: "body", widget: "text"}
