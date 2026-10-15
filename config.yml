@@ -1,0 +1,97 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/YOUR_REPOSITORY
+  branch: main
+  # GitHub OAuth authentication requires a compatible OAuth provider.
+  # Configure base_url and auth_endpoint when you have set one up.
+  # base_url: https://YOUR-OAUTH-PROVIDER.example
+  # auth_endpoint: auth
+
+media_folder: "images"
+public_folder: "/images"
+publish: false
+
+collections:
+  - name: "pages"
+    label: "Website Pages"
+    files:
+      - label: "Homepage"
+        name: "home"
+        file: "content/home.json"
+        fields:
+          - {label: "Headline", name: "headline", widget: "string"}
+          - {label: "Intro", name: "intro", widget: "text"}
+          - {label: "Hero image", name: "hero_image", widget: "image", required: false}
+          - {label: "Welcome heading", name: "welcome_heading", widget: "string"}
+          - {label: "Welcome text", name: "welcome_text", widget: "text"}
+          - {label: "Welcome image", name: "welcome_image", widget: "image", required: false}
+      - label: "About"
+        name: "about"
+        file: "content/about.json"
+        fields:
+          - {label: "Page heading", name: "heading", widget: "string"}
+          - {label: "Page text", name: "body", widget: "text"}
+      - label: "Teaching"
+        name: "teaching"
+        file: "content/teaching.json"
+        fields:
+          - {label: "Page heading", name: "heading", widget: "string"}
+          - {label: "Page text", name: "body", widget: "text"}
+      - label: "Contact"
+        name: "contact"
+        file: "content/contact.json"
+        fields:
+          - {label: "Page heading", name: "heading", widget: "string"}
+          - {label: "Page text", name: "body", widget: "text"}
+          - {label: "Contact email", name: "email", widget: "string"}
+  - name: "research"
+    label: "Research Projects"
+    files:
+      - label: "Projects"
+        name: "projects"
+        file: "content/research.json"
+        fields:
+          - {label: "Page heading", name: "heading", widget: "string"}
+          - {label: "Page introduction", name: "body", widget: "text"}
+          - label: "Projects"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Photograph", name: "image", widget: "image", required: false}
+  - name: "publications"
+    label: "Publications"
+    files:
+      - label: "Publication list"
+        name: "list"
+        file: "content/publications.json"
+        fields:
+          - {label: "Page heading", name: "heading", widget: "string"}
+          - {label: "Introduction", name: "body", widget: "text"}
+          - label: "Publications"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Authors", name: "authors", widget: "string"}
+              - {label: "Year", name: "year", widget: "number", value_type: "int"}
+              - {label: "Journal", name: "journal", widget: "string", required: false}
+              - {label: "DOI / article URL", name: "url", widget: "string", required: false}
+  - name: "people"
+    label: "Lab Members"
+    files:
+      - label: "People"
+        name: "list"
+        file: "content/people.json"
+        fields:
+          - {label: "Page heading", name: "heading", widget: "string"}
+          - {label: "Introduction", name: "body", widget: "text"}
+          - label: "Members"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Role", name: "role", widget: "string"}
+              - {label: "Bio", name: "bio", widget: "text", required: false}
+              - {label: "Portrait", name: "image", widget: "image", required: false}

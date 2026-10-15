@@ -1,0 +1,2 @@
+
+.editable-items{display:grid;gap:22px;margin-top:40px}.editable-card{display:flex;gap:24px;background:#f7f6f1;border:1px solid #e3e8e3;padding:22px}.editable-photo{width:200px;max-height:180px;object-fit:cover}.editable-copy h3{margin:0 0 8px}.editable-copy p{margin:7px 0}.editable-role{font-weight:700;color:#527866}@media(max-width:760px){.editable-card{flex-direction:column}.editable-photo{width:100%}}

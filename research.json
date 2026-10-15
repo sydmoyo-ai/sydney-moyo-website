@@ -1,0 +1,21 @@
+{
+  "heading": "Questions that cross boundaries",
+  "body": "My work investigates aquatic–terrestrial subsidies, wetland and coastal food webs, biodiversity conservation, and contaminants in aquatic ecosystems.",
+  "items": [
+    {
+      "title": "Aquatic–terrestrial connections",
+      "description": "How emerging aquatic insects and resource subsidies connect freshwater habitats to terrestrial food webs.",
+      "image": ""
+    },
+    {
+      "title": "Food webs in a changing world",
+      "description": "How hydroperiod, river management, and climate shape trophic interactions in wetlands and coastal marshes.",
+      "image": ""
+    },
+    {
+      "title": "Biodiversity & contaminants",
+      "description": "Using invertebrates and ecological tracers to understand freshwater biodiversity and contaminant exposure.",
+      "image": ""
+    }
+  ]
+}
