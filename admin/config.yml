@@ -90,11 +90,18 @@ collections:
         fields:
           - {label: "Page heading", name: "heading", widget: "string"}
           - {label: "Introduction", name: "body", widget: "text"}
-          - label: "Members"
+          - {label: "Join heading", name: "join_heading", widget: "string"}
+          - {label: "Join description", name: "join_text", widget: "text"}
+          - label: "People"
             name: "items"
             widget: "list"
             fields:
               - {label: "Name", name: "name", widget: "string"}
               - {label: "Role", name: "role", widget: "string"}
-              - {label: "Bio", name: "bio", widget: "text", required: false}
+              - label: "Section"
+                name: "group"
+                widget: "select"
+                options: ["Principal Investigator", "Current Lab Members", "Postdoctoral Researchers", "Alumni"]
+              - {label: "Biography", name: "bio", widget: "text", required: false}
               - {label: "Portrait", name: "image", widget: "image", required: false}
+              - {label: "Profile URL", name: "url", widget: "string", required: false}
