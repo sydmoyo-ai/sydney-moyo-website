@@ -74,7 +74,7 @@
     }
   }
   if (location.protocol === 'file:') return;
-  fetch(new URL(page + '.json', document.baseURI), { cache: 'no-cache' })
+ fetch('/sydney-moyo-website/' + page + '.json', { cache: 'no-cache' })
     .then(r => { if (!r.ok) throw Error('Content unavailable'); return r.json(); })
     .then(data => {
       if (page === 'people') { renderPeople(data); } else if (page === 'home') {
@@ -82,7 +82,7 @@
         setText('.two h2', data.welcome_heading); setText('.two p', data.welcome_text);
         setImage('.hero-image', data.hero_image); setImage('.feature-img', data.welcome_image);
         const cards = document.querySelectorAll('.card');
-        fetch('research.json').then(r => r.json()).then(research => {
+        fetch('/sydney-moyo-website/research.json').then(r => r.json()).then(research => {
           (research.items || []).slice(0, 3).forEach((item, i) => {
             if (!cards[i]) return;
             const h = cards[i].querySelector('h3'), p = cards[i].querySelector('p'), img = cards[i].querySelector('img');
