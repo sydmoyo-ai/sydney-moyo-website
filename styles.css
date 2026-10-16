@@ -1,2 +1,41 @@
-
-.editable-items{display:grid;gap:22px;margin-top:40px}.editable-card{display:flex;gap:24px;background:#f7f6f1;border:1px solid #e3e8e3;padding:22px}.editable-photo{width:200px;max-height:180px;object-fit:cover}.editable-copy h3{margin:0 0 8px}.editable-copy p{margin:7px 0}.editable-role{font-weight:700;color:#527866}@media(max-width:760px){.editable-card{flex-direction:column}.editable-photo{width:100%}}
+/* Sydney Moyo faculty website — shared stylesheet */
+:root{--forest:#173f32;--deep:#102f27;--green:#426c55;--sage:#dce7dc;--paper:#f7f7f2;--cream:#f1f3ed;--ink:#24352c;--muted:#596b60;--line:#d8e1d8;--white:#fff;--width:1120px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.7}
+img{max-width:100%;display:block}a{color:var(--green)}a:hover{color:var(--deep)}button{font:inherit}
+.wrap,.nav-shell{width:min(var(--width),calc(100% - 48px));margin-inline:auto}
+.site-header{background:var(--deep);position:relative;z-index:5;box-shadow:0 2px 10px #102f271a}
+.nav-shell{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:inline-flex;align-items:center;flex:none}.brand img{width:74px;height:64px;object-fit:contain}
+.nav-links{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(10px,1.7vw,25px)}
+.nav-links a{color:#eef5ed;text-decoration:none;font-size:.92rem;font-weight:600;padding:8px 0;border-bottom:2px solid transparent;transition:border-color .15s,color .15s}
+.nav-links a:hover,.nav-links a[aria-current]{color:#d4e9d3;border-bottom-color:#a8c9aa}
+.menu-toggle{display:none;color:white;background:transparent;border:1px solid #789688;border-radius:7px;padding:8px 13px;cursor:pointer}
+main{min-height:55vh}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;font-weight:800;color:var(--green)}
+h1,h2,h3{line-height:1.2;letter-spacing:-.025em;color:var(--forest)}h1{font-size:clamp(2.5rem,5.5vw,4.7rem);margin:.4em 0 .35em}h2{font-size:clamp(1.75rem,3vw,2.55rem);margin:0 0 .55em}h3{font-size:1.23rem;margin:0 0 .55em}
+p{margin:0 0 1.2em}.lead{font-size:clamp(1.06rem,1.65vw,1.25rem);line-height:1.8;color:#40594b;max-width:850px}
+.page-hero{padding-block:80px 28px}.page-hero h1{max-width:920px}.page-body{padding-block:18px 85px}
+.panel{background:#edf2e9;border:1px solid var(--line);border-radius:14px;padding:28px;margin-top:35px}.panel h3{color:var(--forest)}
+/* Homepage */
+.hero{padding-block:70px 65px}.hero .lead{max-width:740px}.hero-image{width:100%;max-height:500px;object-fit:cover;border-radius:16px}
+.two{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:55px;padding-block:55px 80px}.two p{color:#465b4d}.feature-img{width:100%;max-height:430px;object-fit:cover;border-radius:14px}
+.cards,.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.card{background:white;border:1px solid var(--line);border-radius:12px;overflow:hidden;padding:22px;box-shadow:0 5px 16px #173f320a}.card img{width:100%;height:190px;object-fit:cover;margin:-22px -22px 20px;max-width:calc(100% + 44px)}.card p{color:var(--muted)}
+/* Generic CMS entries */
+.editable-items{display:grid;gap:22px;margin-top:40px}.editable-card{display:flex;gap:24px;background:#fff;border:1px solid var(--line);border-radius:13px;padding:25px;box-shadow:0 4px 18px #173f3208}.editable-photo{width:200px;max-height:180px;object-fit:cover;border-radius:8px;flex:none}.editable-copy{min-width:0}.editable-copy h3{margin:0 0 9px}.editable-copy p{margin:7px 0;color:var(--muted)}.editable-role{font-weight:700!important;color:var(--green)!important}.text-link{font-weight:700;text-decoration-thickness:1px}
+/* Nested research themes: support several semantic class conventions */
+.research-themes,.theme-list,.research-groups{display:grid;gap:38px;margin-top:45px}
+.research-theme,.theme-section,.research-group{background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:clamp(22px,3vw,40px);margin-block:25px}
+.research-theme h2,.theme-section h2,.research-group h2{font-size:clamp(1.6rem,2.7vw,2.3rem);color:var(--forest)}
+.research-theme>p,.theme-section>p,.research-group>p{color:var(--muted);max-width:850px}
+.research-theme .editable-items,.theme-section .editable-items,.research-group .editable-items{margin-top:25px;gap:15px}
+.research-theme article,.theme-section article,.research-group article{border-radius:12px}
+/* Common class names for the nested project renderer */
+.project-list,.theme-projects,.research-projects{display:grid;gap:16px;margin-top:22px}
+.project-card,.project-item{background:white;border:1px solid var(--line);border-radius:12px;padding:22px}
+.project-card h3,.project-item h3{font-size:1.12rem}.project-card p,.project-item p{color:var(--muted);margin-bottom:0}
+/* Footer */
+.footer{border-top:1px solid var(--line);padding-block:30px 42px;color:var(--muted);font-size:.88rem}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer a{color:var(--forest);font-weight:600;text-decoration:none}
+@media(max-width:900px){.nav-shell{min-height:78px}.nav-links{gap:13px}.nav-links a{font-size:.83rem}.two{gap:28px}}
+@media(max-width:760px){.wrap,.nav-shell{width:min(var(--width),calc(100% - 32px))}.nav-shell{flex-wrap:wrap;padding-block:10px}.brand img{width:60px;height:54px}.menu-toggle{display:inline-flex}.nav-links{display:none;width:100%;flex-direction:column;align-items:stretch;gap:0;padding:8px 0 14px}.nav-links.open,.nav-links.is-open,.nav-links.active,.nav-links[aria-hidden="false"]{display:flex}.nav-links a{padding:10px 6px}.page-hero{padding-block:52px 18px}.page-body{padding-bottom:60px}.hero{padding-block:45px}.two{grid-template-columns:1fr;padding-block:35px 60px}.cards,.card-grid{grid-template-columns:1fr}.editable-card{flex-direction:column}.editable-photo{width:100%;max-height:260px}.research-theme,.theme-section,.research-group{padding:20px}.footer-inner{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
