@@ -74,7 +74,7 @@
     }
   }
   if (location.protocol === 'file:') return;
-  fetch(page + '.json', { cache: 'no-cache' })
+  fetch(new URL(page + '.json', document.baseURI), { cache: 'no-cache' })
     .then(r => { if (!r.ok) throw Error('Content unavailable'); return r.json(); })
     .then(data => {
       if (page === 'people') { renderPeople(data); } else if (page === 'home') {
