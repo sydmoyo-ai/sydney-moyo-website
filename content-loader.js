@@ -41,11 +41,43 @@
     }
     body.append(holder);
   }
+  function renderPeople(data) {
+    const target = document.getElementById('people-directory');
+    if (!target) return;
+    setText('#people-heading', data.heading);
+    setText('#people-intro', data.body);
+    setText('#people-join-heading', data.join_heading);
+    setText('#people-join-text', data.join_text);
+    target.replaceChildren();
+    const groups = ['Principal Investigator', 'Current Lab Members', 'Postdoctoral Researchers', 'Alumni'];
+    function portrait(person) {
+      if (person.image) { const img = el('img','people-portrait'); img.src=person.image; img.alt='Portrait of '+person.name; img.loading='lazy'; return img; }
+      const placeholder = el('div','people-placeholder'); placeholder.setAttribute('aria-label','Photo coming soon'); placeholder.textContent=(person.name||'?').split(/\s+/).slice(0,2).map(x=>x[0]).join('').toUpperCase(); return placeholder;
+    }
+    for (const group of groups) {
+      const people=(data.items||[]).filter(p=>p.group===group);
+      if (!people.length) continue;
+      const section=el('section','people-section');
+      section.append(el('h2','people-title',group));
+      const grid=el('div',group==='Principal Investigator'?'people-pi':group==='Alumni'?'people-alumni':'people-card-grid');
+      for (const person of people) {
+        const card=el('article','people-card');
+        const photo=portrait(person);
+        const copy=el('div','people-copy');
+        copy.append(el('h3','',person.name));
+        if (person.role) copy.append(el('p','people-role',person.role));
+        if (person.bio) copy.append(el('p','',person.bio));
+        if (person.url && /^(https:\/\/|[a-z0-9-]+\.html$)/i.test(person.url)) {const link=el('a','people-button','View full profile →'); link.href=person.url; if (person.url.startsWith('https://')) {link.target='_blank';link.rel='noopener noreferrer';} copy.append(link);}
+        if (group==='Principal Investigator') {grid.append(photo,copy);} else {card.append(photo,copy);grid.append(card);}
+      }
+      section.append(grid);target.append(section);
+    }
+  }
   if (location.protocol === 'file:') return;
   fetch('/' + page + '.json', { cache: 'no-cache' })
     .then(r => { if (!r.ok) throw Error('Content unavailable'); return r.json(); })
     .then(data => {
-      if (page === 'home') {
+      if (page === 'people') { renderPeople(data); } else if (page === 'home') {
         setText('.hero h1', data.headline); setText('.hero .lead', data.intro);
         setText('.two h2', data.welcome_heading); setText('.two p', data.welcome_text);
         setImage('.hero-image', data.hero_image); setImage('.feature-img', data.welcome_image);
@@ -66,4 +98,3 @@
       }
     }).catch(e => console.warn('Using built-in page content:', e.message));
 })();
-

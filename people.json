@@ -1,5 +1,80 @@
 {
-  "heading": "People & mentoring",
-  "body": "Science is collaborative. My research involves undergraduate and graduate students, postdoctoral researchers, and collaborators working across aquatic ecology, conservation, and biogeochemistry.",
-  "items": []
+  "heading": "People",
+  "body": "Our group studies how energy, nutrients, and contaminants connect ecosystems. We combine field and laboratory work, ecological tracers, and quantitative modeling to understand food webs and environmental change.",
+  "join_heading": "Join the Lab",
+  "join_text": "Interested in undergraduate research, graduate study, or postdoctoral opportunities? Get in touch to discuss potential projects and opportunities.",
+  "items": [
+    {
+      "name": "Sydney Moyo",
+      "role": "Assistant Professor · Louisiana State University",
+      "group": "Principal Investigator",
+      "bio": "I am an aquatic ecologist studying how energy, nutrients, and contaminants move across aquatic and terrestrial ecosystems. My research combines field studies, stable isotopes, fatty-acid biomarkers, and ecological modeling.",
+      "image": "/images/sydney-moyo.jpg",
+      "url": "about.html"
+    },
+    {
+      "name": "Kaydence Dubroc",
+      "role": "Master’s Student",
+      "group": "Current Lab Members",
+      "bio": "Research interests and project description coming soon.",
+      "image": "",
+      "url": ""
+    },
+    {
+      "name": "Caleb Loque",
+      "role": "Undergraduate Researcher",
+      "group": "Current Lab Members",
+      "bio": "Contributes to research on mercury contamination across freshwater and terrestrial ecosystems.",
+      "image": "",
+      "url": ""
+    },
+    {
+      "name": "Chloe Trosclair",
+      "role": "Undergraduate Researcher",
+      "group": "Current Lab Members",
+      "bio": "Contributes to research on mercury contamination across freshwater and terrestrial ecosystems.",
+      "image": "",
+      "url": ""
+    },
+    {
+      "name": "Monica Levron",
+      "role": "Undergraduate Researcher",
+      "group": "Current Lab Members",
+      "bio": "Contributes to research on mercury contamination across freshwater and terrestrial ecosystems.",
+      "image": "",
+      "url": ""
+    },
+    {
+      "name": "Cassie Campbell",
+      "role": "Undergraduate Researcher",
+      "group": "Current Lab Members",
+      "bio": "Contributes to research on mercury contamination across freshwater and terrestrial ecosystems.",
+      "image": "",
+      "url": ""
+    },
+    {
+      "name": "Augustine Sitati",
+      "role": "Postdoctoral Researcher — confirm current appointment",
+      "group": "Postdoctoral Researchers",
+      "bio": "Research interests include aquatic ecology, biogeochemistry, stable isotopes, and quantitative modeling. Please confirm appointment status before publishing.",
+      "image": "",
+      "url": ""
+    },
+    {
+      "name": "Shaylyn M. Bradley",
+      "role": "Former Researcher — confirm status",
+      "group": "Alumni",
+      "bio": "Profile details to be confirmed.",
+      "image": "",
+      "url": ""
+    },
+    {
+      "name": "Ava Benfiglio",
+      "role": "Former Researcher — confirm status",
+      "group": "Alumni",
+      "bio": "Profile details to be confirmed.",
+      "image": "",
+      "url": ""
+    }
+  ]
 }
