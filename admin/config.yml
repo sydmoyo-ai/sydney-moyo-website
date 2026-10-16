@@ -2,14 +2,9 @@ backend:
   name: github
   repo: sydmoyo-ai/sydney-moyo-website
   branch: main
-  # GitHub OAuth authentication requires a compatible OAuth provider.
-  # Configure base_url and auth_endpoint when you have set one up.
-  # base_url: https://YOUR-OAUTH-PROVIDER.example
-  # auth_endpoint: auth
 
 media_folder: "images"
 public_folder: "/images"
-publish: false
 
 collections:
   - name: "pages"
@@ -53,13 +48,21 @@ collections:
         fields:
           - {label: "Page heading", name: "heading", widget: "string"}
           - {label: "Page introduction", name: "body", widget: "text"}
-          - label: "Projects"
+          - label: "Research themes"
             name: "items"
             widget: "list"
             fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Description", name: "description", widget: "text"}
-              - {label: "Photograph", name: "image", widget: "image", required: false}
+              - {label: "Theme title", name: "title", widget: "string"}
+              - {label: "Theme description", name: "description", widget: "text"}
+              - {label: "Theme photograph", name: "image", widget: "image", required: false}
+              - label: "Projects within this theme"
+                name: "projects"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Project title", name: "title", widget: "string"}
+                  - {label: "Project description", name: "description", widget: "text"}
+                  - {label: "Project photograph", name: "image", widget: "image", required: false}
   - name: "publications"
     label: "Publications"
     files:
