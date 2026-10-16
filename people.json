@@ -33,7 +33,7 @@
       "role": "Postdoctoral Reseacher",
       "group": "Alumni",
       "bio": "Lenin worked  aquatic–terrestrial linkages in Louisiana streams",
-      "image": "/images/lenin-chari.png",
+      "image": "images/lenin-chari.png",
       "url": ""
     },
     {
@@ -49,7 +49,7 @@
       "role": "Undergraduate Researcher | Fatty-Acid Analysis",
       "group": "Alumni",
       "bio": "Cadence was our resident fatty-acid extraction extraordinaire! She contributes to ongoing research by preparing and extracting biological samples for fatty-acid analysis, bringing remarkable speed and efficiency to laboratory work.",
-      "image": "/images/cadence-gilbert.jpg",
+      "image": "images/cadence-gilbert.jpg",
       "url": ""
     },
     {
@@ -64,7 +64,7 @@
       "role": "Undergraduate Researcher | Fatty-Acid Analysis",
       "group": "Alumni",
       "name": "Eduardo Howell",
-      "image": "/images/eduardo-howell.png",
+      "image": "images/eduardo-howell.png",
       "bio": "Eduardo was part of our fatty-acid team! He contributed to laboratory research by preparing biological samples and conducting fatty-acid extractions, helping us investigate food webs and resource use across ecosystems."
     }
   ]
