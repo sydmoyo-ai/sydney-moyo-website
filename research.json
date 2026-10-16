@@ -1,21 +1,35 @@
 {
   "heading": "Questions that cross boundaries",
-  "body": "My work investigates aquatic–terrestrial subsidies, wetland and coastal food webs, biodiversity conservation, and contaminants in aquatic ecosystems.",
+  "body": "My research examines how ecological processes connect aquatic and terrestrial ecosystems, with particular emphasis on the movement of energy, nutrients, and contaminants through food webs. I combine field studies, stable isotope analysis, fatty-acid biomarkers, and ecological modeling to investigate the mechanisms that structure ecological communities and how these relationships respond to environmental change.",
   "items": [
     {
-      "title": "Aquatic–terrestrial connections",
-      "description": "How emerging aquatic insects and resource subsidies connect freshwater habitats to terrestrial food webs.",
-      "image": ""
+      "title": "Cross-Ecosystem Resource Flows",
+      "description": "Understanding how energy, nutrients, and contaminants move between aquatic and terrestrial ecosystems and influence consumers and food webs.",
+      "image": "",
+      "projects": [
+        {"title": "Aquatic insect emergence and terrestrial consumers", "description": "Investigating how emerging aquatic insects support terrestrial predators and influence resource use and physiology across freshwater–terrestrial boundaries.", "image": ""},
+        {"title": "Elephant dung subsidies in river food webs", "description": "Examining how elephant-derived organic matter enters aquatic food webs and contributes to the diets of invertebrates and fishes.", "image": ""},
+        {"title": "Mercury transfer across freshwater–terrestrial boundaries", "description": "Using aquatic insects and terrestrial spiders to investigate mercury exposure and movement across connected ecosystems.", "image": ""}
+      ]
     },
     {
-      "title": "Food webs in a changing world",
-      "description": "How hydroperiod, river management, and climate shape trophic interactions in wetlands and coastal marshes.",
-      "image": ""
+      "title": "Food Web Structure and Dynamics",
+      "description": "Investigating trophic interactions, resource pathways, and food web organization across freshwater and coastal ecosystems.",
+      "image": "",
+      "projects": [
+        {"title": "Food webs in restored and natural coastal marshes", "description": "Comparing trophic structure and resource pathways across coastal marshes to understand how restoration and freshwater management influence ecosystem functioning.", "image": ""},
+        {"title": "Hydroperiod and ephemeral wetland food webs", "description": "Examining how variation in wetland hydroperiod influences trophic position, resource reliance, and isotopic niche structure.", "image": ""},
+        {"title": "Modeling coastal food web responses", "description": "Integrating field observations and ecological models to explore how freshwater management and environmental change influence coastal food webs.", "image": ""}
+      ]
     },
     {
-      "title": "Biodiversity & contaminants",
-      "description": "Using invertebrates and ecological tracers to understand freshwater biodiversity and contaminant exposure.",
-      "image": ""
+      "title": "Environmental Change and Ecological Responses",
+      "description": "Examining how climate, hydrology, land use, and other environmental drivers influence ecological interactions and biodiversity.",
+      "image": "",
+      "projects": [
+        {"title": "Threatened Odonata in Zimbabwe's Eastern Highlands", "description": "Combining field surveys and species distribution modeling to investigate habitat suitability and conservation needs of threatened dragonflies and damselflies.", "image": ""},
+        {"title": "African freshwater biodiversity patterns", "description": "Investigating geographic patterns in freshwater biodiversity records and conservation knowledge across African aquatic ecosystems.", "image": ""}
+      ]
     }
   ]
 }
