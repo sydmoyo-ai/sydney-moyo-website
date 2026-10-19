@@ -1,127 +1,96 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Research on aquatic–terrestrial connections, changing food webs, biodiversity and contaminants in the Moyo Lab at Louisiana State University.">
-  <title>Research | Sydney Moyo</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .research-hero{padding:68px 0 28px}
-    .research-hero h1{max-width:950px}
-    .research-intro{max-width:900px;margin-bottom:42px}
-    .research-methods{padding:22px 26px;background:#edf2e9;border:1px solid var(--line);border-radius:14px;margin-bottom:50px}
-    .research-methods h2{font-size:1.2rem;margin:0 0 9px}
-    .research-methods p{margin:0;color:var(--muted)}
-    .research-themes{display:grid;gap:36px;margin:0 0 70px}
-    .research-theme{background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden;padding:0;margin:0;box-shadow:0 5px 20px #173f3209}
-    .research-theme-main{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:0;align-items:stretch}
-    .research-theme-image{width:100%;height:100%;min-height:270px;object-fit:cover}
-    .research-theme-copy{padding:clamp(24px,4vw,46px)}
-    .research-theme-number{font-size:.76rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--green);margin-bottom:12px}
-    .research-theme h2{font-size:clamp(1.65rem,3vw,2.4rem);margin:0 0 16px}
-    .research-theme-copy p{color:var(--muted);margin:0}
-    .research-projects{display:grid;gap:16px;padding:0 clamp(24px,4vw,46px) 34px}
-    .research-projects-heading{font-size:1.12rem;margin:0 0 2px;color:var(--forest)}
-    .research-project{border-top:1px solid var(--line);padding-top:16px;display:grid;grid-template-columns:110px minmax(0,1fr);gap:20px}
-    .research-project.no-image{grid-template-columns:1fr}
-    .research-project img{width:110px;height:90px;object-fit:cover;border-radius:9px}
-    .research-project h3{font-size:1.08rem;margin:0 0 6px}
-    .research-project p{color:var(--muted);margin:0;font-size:.95rem}
-    .research-publications{border-top:1px solid var(--line);padding:20px clamp(24px,4vw,46px) 30px}
-    .research-publications a{font-weight:700}
-    .research-empty{color:var(--muted);padding:25px 0}
-    @media(max-width:760px){
-      .research-hero{padding-top:48px}
-      .research-theme-main{grid-template-columns:1fr}
-      .research-theme-image{height:230px;min-height:0}
-      .research-project{grid-template-columns:80px minmax(0,1fr);gap:14px}
-      .research-project img{width:80px;height:80px}
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Research in aquatic–terrestrial connections, food webs, biodiversity and contaminants at Louisiana State University.">
+<title>Research | Sydney Moyo</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.research-hero{padding:65px 0 32px}.research-hero h1{max-width:960px}
+.research-hero .lead{max-width:920px}
+.research-list{display:grid;gap:38px;padding-bottom:80px}
+.theme{border-top:1px solid var(--line);padding-top:35px}
+.theme-header{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;margin-bottom:28px}
+.theme-number{font-size:.78rem;letter-spacing:.12em;font-weight:800;color:var(--green);text-transform:uppercase}
+.theme h2{margin:0;font-size:clamp(1.9rem,3.2vw,2.65rem)}
+.theme-description{max-width:850px;color:#465b4d;font-size:1.08rem}
+.theme-content{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.9fr);gap:34px;align-items:start}
+.theme h3{font-size:1.1rem;margin:0 0 16px}
+.project-list{display:grid;gap:12px;margin:0}
+.project{background:#fff;border:1px solid var(--line);border-radius:12px;padding:19px 22px}
+.project h4{font-size:1rem;line-height:1.4;color:var(--forest);margin:0 0 7px}
+.project p{color:var(--muted);font-size:.94rem;line-height:1.65;margin:0}
+.papers{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:24px}
+.paper{padding:0 0 18px;margin-bottom:18px;border-bottom:1px solid var(--line)}
+.paper:last-of-type{padding-bottom:0;margin-bottom:16px;border-bottom:0}
+.paper-title{font-weight:700;line-height:1.45;color:var(--forest);margin:0 0 6px}
+.paper-meta{font-size:.85rem;line-height:1.6;color:var(--muted);margin:0}
+.paper a{font-size:.86rem;font-weight:700}
+.all-publications{font-weight:700}
+.research-error{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
+@media(max-width:800px){.theme-content{grid-template-columns:1fr}.research-hero{padding-top:44px}}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav-shell" aria-label="Main navigation">
-      <a class="brand" href="index.html"><img src="dragonfly-logo.svg" alt="Sydney Moyo dragonfly logo"></a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="main-links">Menu ☰</button>
-      <div class="nav-links" id="main-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="research.html" aria-current="page">Research</a>
-        <a href="publications.html">Publications</a>
-        <a href="people.html">People</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </header>
-  <main class="wrap">
-    <section class="research-hero">
-      <div class="eyebrow">Research · Louisiana State University</div>
-      <h1>Questions that cross boundaries</h1>
-      <p class="lead research-intro" id="research-intro">My work investigates aquatic–terrestrial subsidies, wetland and coastal food webs, biodiversity conservation, and contaminants in aquatic ecosystems. I use stable isotopes, fatty acids, ecological modeling, and field studies to connect processes across ecosystem boundaries.</p>
-    </section>
-    <section class="research-methods" aria-label="Research approaches">
-      <h2>How we study ecosystems</h2>
-      <p>Field studies · Stable isotopes · Fatty acids · Contaminant analysis · Ecological modeling</p>
-    </section>
-    <div id="research-themes" class="research-themes" aria-live="polite"></div>
-  </main>
-  <footer class="footer wrap">
-    <div class="footer-inner">
-      <div>© 2026 Sydney Moyo · Department of Biological Sciences, LSU</div>
-      <div><a href="mailto:smoyo@lsu.edu">smoyo@lsu.edu</a> · <a href="contact.html">Contact</a></div>
-    </div>
-  </footer>
-  <script src="script.js"></script>
-  <script>
-    (function(){
-      const target=document.getElementById('research-themes');
-      const intro=document.getElementById('research-intro');
-      const fallback=[
-        {title:'Aquatic–terrestrial connections',description:'Understanding how energy, nutrients, and contaminants move across ecosystem boundaries, and how these exchanges influence food webs and consumers.'},
-        {title:'Food webs in a changing world',description:'Investigating how climate change, freshwater management, restoration, and species invasions affect the structure and functioning of aquatic food webs.'},
-        {title:'Biodiversity and contaminants',description:'Examining freshwater biodiversity and the distribution, accumulation, and movement of contaminants across aquatic and terrestrial ecosystems.'}
-      ];
-      function element(tag,className,text){const node=document.createElement(tag);if(className)node.className=className;if(text!=null)node.textContent=text;return node;}
-      function imagePath(value){if(!value||typeof value!=='string')return '';if(/^(https?:\/\/|\/|images\/)/i.test(value))return value;return 'images/'+value;}
-      function render(items){
-        target.replaceChildren();
-        items.forEach((theme,index)=>{
-          const card=element('section','research-theme');
-          const main=element('div','research-theme-main');
-          if(theme.image){const img=element('img','research-theme-image');img.src=imagePath(theme.image);img.alt=theme.title||'Research theme photograph';img.loading='lazy';main.append(img);}
-          const copy=element('div','research-theme-copy');
-          copy.append(element('div','research-theme-number','Research theme '+String(index+1).padStart(2,'0')));
-          copy.append(element('h2','',theme.title||'Research theme'));
-          if(theme.description)copy.append(element('p','',theme.description));
-          main.append(copy);card.append(main);
-          if(Array.isArray(theme.projects)&&theme.projects.length){
-            const projects=element('div','research-projects');
-            projects.append(element('h3','research-projects-heading','Selected projects'));
-            theme.projects.forEach(project=>{
-              const entry=element('article','research-project'+(project.image?'':' no-image'));
-              if(project.image){const img=element('img');img.src=imagePath(project.image);img.alt=project.title||'Project photograph';img.loading='lazy';entry.append(img);}
-              const content=element('div');content.append(element('h3','',project.title||'Project'));
-              if(project.description)content.append(element('p','',project.description));
-              entry.append(content);projects.append(entry);
-            });
-            card.append(projects);
-          }
-          const publication=element('div','research-publications');
-          const link=element('a','', 'Browse publications →');link.href='publications.html';publication.append(link);card.append(publication);
-          target.append(card);
-        });
-      }
-      fetch('research.json',{cache:'no-store'})
-        .then(response=>{if(!response.ok)throw Error('Unable to load research.json');return response.json();})
-        .then(data=>{
-          if(data.body)intro.textContent=data.body;
-          render(Array.isArray(data.items)&&data.items.length?data.items:fallback);
-        })
-        .catch(()=>render(fallback));
-    })();
-  </script>
+<header class="site-header">
+<nav class="nav-shell" aria-label="Main navigation">
+<a class="brand" href="index.html"><img src="dragonfly-logo.svg" alt="Sydney Moyo dragonfly logo"></a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="main-links">Menu ☰</button>
+<div class="nav-links" id="main-links">
+<a href="index.html">Home</a><a href="about.html">About</a>
+<a href="research.html" aria-current="page">Research</a>
+<a href="publications.html">Publications</a><a href="people.html">People</a>
+<a href="teaching.html">Teaching</a><a href="contact.html">Contact</a>
+</div></nav></header>
+<main class="wrap">
+<section class="research-hero">
+<div class="eyebrow">Research</div>
+<h1 id="research-heading">Questions that cross boundaries</h1>
+<p class="lead" id="research-intro">Exploring how energy, nutrients, and contaminants move across aquatic and terrestrial ecosystems.</p>
+</section>
+<div class="research-list" id="research-list" aria-live="polite"></div>
+</main>
+<footer class="footer wrap"><div class="footer-inner"><div>© 2026 Sydney Moyo · Department of Biological Sciences, LSU</div><div><a href="mailto:smoyo@lsu.edu">smoyo@lsu.edu</a> · <a href="contact.html">Contact</a></div></div></footer>
+<script src="script.js"></script>
+<script>
+(function(){
+const list=document.getElementById('research-list');
+const node=(tag,className,txt)=>{const el=document.createElement(tag);if(className)el.className=className;if(txt!=null)el.textContent=txt;return el};
+const safeArray=x=>Array.isArray(x)?x:[];
+fetch('research.json',{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error('Research data could not be loaded');return response.json()}).then(data=>{
+document.getElementById('research-heading').textContent=data.heading||'Questions that cross boundaries';
+document.getElementById('research-intro').textContent=data.body||'';
+list.replaceChildren();
+safeArray(data.items).forEach((theme,i)=>{
+const section=node('section','theme');
+const head=node('div','theme-header');
+head.append(node('div','theme-number','Research theme '+(i+1)),node('h2','',theme.title||'Research theme'),node('p','theme-description',theme.description||''));
+section.append(head);
+const content=node('div','theme-content');
+const projects=node('div','');
+projects.append(node('h3','','Current and ongoing projects'));
+const projectsList=node('div','project-list');
+safeArray(theme.projects).forEach(project=>{
+const card=node('article','project');
+card.append(node('h4','',project.title||''),node('p','',project.description||''));
+projectsList.append(card);
+});
+projects.append(projectsList);
+const papers=node('aside','papers');
+papers.append(node('h3','','Selected publications'));
+safeArray(theme.publications).forEach(pub=>{
+const item=node('div','paper');
+item.append(node('p','paper-title',pub.title||''),node('p','paper-meta',(pub.authors||'')+' ('+(pub.year||'')+'). '+(pub.journal||'')));
+if(pub.doi){const link=node('a','','Read paper ↗');link.href='https://doi.org/'+encodeURI(pub.doi);link.target='_blank';link.rel='noopener noreferrer';item.append(link)}
+papers.append(item);
+});
+const all=node('a','all-publications','View all publications →');all.href='publications.html';papers.append(all);
+content.append(projects,papers);section.append(content);list.append(section);
+});
+}).catch(err=>{list.replaceChildren(node('p','research-error','The research content is temporarily unavailable. Please try refreshing the page.'));console.error(err)});
+})();
+</script>
 </body>
 </html>
+
