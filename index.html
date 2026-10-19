@@ -21,6 +21,9 @@
     .home-intro img{width:100%;height:340px;object-fit:cover;border-radius:14px}
     .home-theme-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:30px}
     .home-theme{background:#fff;border:1px solid #d8e1d8;border-radius:15px;overflow:hidden;box-shadow:0 5px 20px #173f320b}
+    .home-theme-link{display:block;color:inherit;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease}
+    .home-theme-link:hover,.home-theme-link:focus-visible{color:inherit;transform:translateY(-4px);box-shadow:0 12px 26px #173f3226}
+    .home-theme-link:focus-visible{outline:3px solid #426c55;outline-offset:3px}
     .home-theme img{width:100%;height:220px;object-fit:cover}
     .home-theme-body{padding:25px}
     .home-theme h3{font-size:1.35rem;margin:0 0 13px}
@@ -82,18 +85,18 @@
       <h2 id="home-research-title">Questions that cross boundaries.</h2>
       <p class="lead">Our research connects the movement of resources across ecosystems with the structure of food webs and the ecological consequences of environmental change.</p>
       <div class="home-theme-grid">
-        <article class="home-theme">
-          <img src="https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Temporary landscape photograph representing cross-ecosystem research" loading="lazy">
-          <div class="home-theme-body"><h3>Cross-Ecosystem Resource Flows</h3><p>Tracing energy, nutrients, and contaminants between aquatic and terrestrial ecosystems, including the role of emerging insects and other resource subsidies.</p></div>
-        </article>
-        <article class="home-theme">
-          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Temporary landscape photograph representing wetland and coastal food webs" loading="lazy">
-          <div class="home-theme-body"><h3>Food Web Structure and Dynamics</h3><p>Understanding trophic interactions and resource pathways in freshwater and coastal ecosystems, including restored marshes and seasonal wetlands.</p></div>
-        </article>
-        <article class="home-theme">
-          <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Temporary nature photograph representing ecological change and conservation" loading="lazy">
-          <div class="home-theme-body"><h3>Environmental Change and Ecological Responses</h3><p>Investigating how land use, hydrology, climate, and other environmental pressures influence biodiversity and ecological interactions.</p></div>
-        </article>
+        <a class="home-theme home-theme-link" href="research.html#aquatic-terrestrial-connections">
+          <img src="https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Landscape representing aquatic and terrestrial ecosystems" loading="lazy">
+          <div class="home-theme-body"><h3>Aquatic–terrestrial connections</h3><p>Understanding how energy, nutrients, and contaminants move across ecosystem boundaries, and how these exchanges influence food webs and consumers.</p></div>
+        </a>
+        <a class="home-theme home-theme-link" href="research.html#food-webs-changing-world">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Landscape representing wetlands and coastal food webs" loading="lazy">
+          <div class="home-theme-body"><h3>Food webs in a changing world</h3><p>Investigating how climate change, freshwater management, restoration, and species invasions affect the structure and functioning of aquatic food webs.</p></div>
+        </a>
+        <a class="home-theme home-theme-link" href="research.html#biodiversity-contaminants">
+          <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Nature photograph representing biodiversity and contaminants" loading="lazy">
+          <div class="home-theme-body"><h3>Biodiversity and contaminants</h3><p>Examining freshwater biodiversity and the distribution, accumulation, and movement of contaminants across aquatic and terrestrial ecosystems.</p></div>
+        </a>
       </div>
       <p class="home-section-footer"><a class="home-text-link" href="research.html">Explore research themes and projects →</a></p>
     </section>
@@ -117,3 +120,4 @@
   <script src="content-loader.js" defer></script>
 </body>
 </html>
+
