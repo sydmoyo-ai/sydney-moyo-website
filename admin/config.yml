@@ -71,16 +71,28 @@ collections:
         file: "publications.json"
         fields:
           - {label: "Page heading", name: "heading", widget: "string"}
-          - {label: "Introduction", name: "body", widget: "text"}
+          - {label: "Introduction", name: "intro", widget: "text"}
+          - {label: "Google Scholar URL", name: "scholar_url", widget: "string", required: false}
           - label: "Publications"
             name: "items"
             widget: "list"
+            summary: "{{fields.year}} — {{fields.title}}"
             fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Authors", name: "authors", widget: "string"}
+              - {label: "Record ID", name: "id", widget: "number", value_type: "int", required: false, hint: "Keep existing IDs unchanged; use the next available number for a new publication."}
               - {label: "Year", name: "year", widget: "number", value_type: "int"}
-              - {label: "Journal", name: "journal", widget: "string", required: false}
-              - {label: "DOI / article URL", name: "url", widget: "string", required: false}
+              - {label: "Authors", name: "authors", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Journal / book / report publisher", name: "journal", widget: "string", required: false}
+              - {label: "Volume, pages, article number", name: "details", widget: "string", required: false}
+              - {label: "Status (e.g., In press)", name: "status", widget: "string", required: false}
+              - {label: "DOI (without https://doi.org/)", name: "doi", widget: "string", required: false}
+              - label: "Publication type"
+                name: "type"
+                widget: "select"
+                options:
+                  - {label: "Peer-reviewed article", value: "article"}
+                  - {label: "Book chapter or technical report", value: "other"}
+                default: "article"
   - name: "people"
     label: "Lab Members"
     files:
@@ -105,3 +117,4 @@ collections:
               - {label: "Biography", name: "bio", widget: "text", required: false}
               - {label: "Portrait", name: "image", widget: "image", required: false}
               - {label: "Profile URL", name: "url", widget: "string", required: false}
+
