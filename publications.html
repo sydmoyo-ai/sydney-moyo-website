@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="styles.css">
 <style>
 :root{--pub-green:#183f34;--pub-muted:#59685f;--pub-cream:#f8f6ef;--pub-border:#dedfd6}
-body{background:var(--pub-cream);color:#24352e;margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+.pub-wrap{color:#24352e}
 .pub-nav{background:var(--pub-green);padding:16px max(24px,calc((100vw - 1120px)/2));display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .pub-brand{color:#fff;text-decoration:none;font-size:1.2rem;font-weight:700;letter-spacing:.01em}
 .pub-links{display:flex;gap:17px;flex-wrap:wrap}.pub-links a{color:#f5f3e9;text-decoration:none;font-size:.88rem}.pub-links a[aria-current=page]{text-decoration:underline;text-underline-offset:6px}
@@ -28,11 +28,13 @@ h1{font-family:Georgia,serif;color:var(--pub-green);font-size:clamp(2.7rem,6vw,4
 </style>
 </head>
 <body>
-<header class="pub-nav"><a class="pub-brand" href="index.html">Sydney Moyo</a><nav class="pub-links" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="research.html">Research</a><a href="publications.html" aria-current="page">Publications</a><a href="people.html">People</a><a href="teaching.html">Teaching</a><a href="contact.html">Contact</a></nav></header>
+<header class="site-header"><nav class="nav-shell" aria-label="Main navigation"><a class="brand" href="index.html"><img src="dragonfly-logo.svg" alt="Sydney Moyo dragonfly logo"></a><button class="menu-toggle" aria-expanded="false" aria-controls="main-links">Menu ☰</button><div class="nav-links" id="main-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="research.html">Research</a><a href="publications.html" aria-current="page">Publications</a><a href="people.html">People</a><a href="teaching.html">Teaching</a><a href="contact.html">Contact</a></div></nav></header>
 <main class="pub-wrap"><div class="pub-eyebrow">Research & scholarship</div><h1 id="pub-heading">Publications</h1><p id="pub-intro" class="pub-intro">Peer-reviewed articles, book chapters, and technical reports.</p>
 <div class="pub-actions"><a class="pub-button" id="scholar-link" href="https://scholar.google.com/citations?user=BjYjYKEAAAAJ" target="_blank" rel="noopener noreferrer">View Google Scholar ↗</a><input id="pub-search" class="pub-search" type="search" placeholder="Search titles, authors, journals, years…" aria-label="Search publications"></div>
 <p id="pub-count" class="pub-count" aria-live="polite">Loading publications…</p><div id="pub-list" aria-live="polite"></div>
 </main>
+<footer class="footer wrap"><div class="footer-inner"><div>© 2026 Sydney Moyo · Department of Biological Sciences, LSU</div><div><a href="mailto:smoyo@lsu.edu">smoyo@lsu.edu</a> · <a href="contact.html">Contact</a></div></div></footer>
+<script src="script.js"></script>
 <script>
 (()=>{
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -41,7 +43,7 @@ let all=[];
 function render(){const q=document.getElementById('pub-search').value.toLocaleLowerCase().trim();const items=all.filter(x=>[x.title,x.authors,x.journal,x.year,x.details].join(' ').toLocaleLowerCase().includes(q));const articles=items.filter(x=>x.type==='article'),other=items.filter(x=>x.type!=='article');let out='';
 function section(arr,heading){if(!arr.length)return '';let h=`<h2 class="pub-section">${heading}</h2>`;let prev=null;for(const x of arr){if(x.year!==prev){h+=`<h3 class="pub-year">${esc(x.year)}</h3>`;prev=x.year;}h+=`<article class="pub-item"><div class="pub-title">${esc(x.title)}</div><p class="pub-authors">${highlight(x.authors)}</p><div class="pub-journal">${esc(x.journal)}${x.details?', '+esc(x.details):''}</div>${x.doi?`<a class="pub-doi" href="https://doi.org/${encodeURIComponent(x.doi)}" target="_blank" rel="noopener noreferrer">DOI ↗</a>`:''}${x.status?`<span class="pub-status">${esc(x.status)}</span>`:''}</article>`;}return h;}
 out=section(articles,'Peer-reviewed articles')+section(other,'Book chapters & technical reports');document.getElementById('pub-list').innerHTML=out||'<p>No publications match your search.</p>';document.getElementById('pub-count').textContent=`Showing ${articles.length} peer-reviewed article${articles.length===1?'':'s'} and ${other.length} chapter/report${other.length===1?'':'s'}`;}
-fetch('publications.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(data=>{all=(data.items||[]).slice().sort((a,b)=>b.year-a.year||a.id-b.id);document.getElementById('pub-heading').textContent=data.heading||'Publications';document.getElementById('pub-intro').textContent=data.intro||'';if(data.scholar_url)document.getElementById('scholar-link').href=data.scholar_url;render();}).catch(err=>{document.getElementById('pub-count').textContent='';document.getElementById('pub-list').innerHTML='<p class="pub-error">Could not load the publication list. Check that <code>publications.json</code> is in the same folder as this page.</p>';console.error(err)});
+fetch('/sydney-moyo-website/publications.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(data=>{all=(data.items||[]).slice().sort((a,b)=>b.year-a.year||a.id-b.id);document.getElementById('pub-heading').textContent=data.heading||'Publications';document.getElementById('pub-intro').textContent=data.intro||'';if(data.scholar_url)document.getElementById('scholar-link').href=data.scholar_url;render();}).catch(err=>{document.getElementById('pub-count').textContent='';document.getElementById('pub-list').innerHTML='<p class="pub-error">Could not load the publication list. Check that <code>publications.json</code> is in the same folder as this page.</p>';console.error(err)});
 document.getElementById('pub-search').addEventListener('input',render);
 })();
 </script>
