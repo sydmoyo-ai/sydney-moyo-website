@@ -1,13 +1,120 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Aquatic ecology, research and teaching at Louisiana State University."><title>Home | Sydney Moyo</title><link rel="stylesheet" href="styles.css"><style>
-/* Homepage-only layout complements the shared stylesheet. */
-.section{padding-block:55px 70px}.section.alt{padding-top:20px}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:24px 0 30px}
-.grid .card{padding:0;overflow:hidden}.grid .card img{width:100%;height:195px;max-width:none;margin:0;object-fit:cover}
-.grid .card-body{padding:23px}.grid .card-body p{margin-bottom:0}
-.button{display:inline-block;background:#173f32;color:white;text-decoration:none;border-radius:7px;padding:12px 20px;font-weight:700;margin:12px 0 0}
-.button:hover{background:#102f27;color:white}.button.light{background:#f7f7f2;color:#173f32}
-.section.dark{background:#173f32;color:#f0f5ef;border-radius:15px;padding:42px;margin-block:25px 50px}
-.section.dark h2,.section.dark p{color:#f0f5ef}.section.dark .intro{max-width:730px}
-.hero-image{max-height:420px}.section .text-link{font-weight:700}
-@media(max-width:760px){.grid{grid-template-columns:1fr}.section{padding-block:35px 45px}.section.dark{padding:24px}}
-</style></head><body><header class="site-header"><nav class="nav-shell" aria-label="Main navigation"><a class="brand" href="index.html"><img src="dragonfly-logo.svg" alt="Sydney Moyo dragonfly logo"></a><button class="menu-toggle" aria-expanded="false" aria-controls="main-links">Menu ☰</button><div class="nav-links" id="main-links"><a href="index.html" aria-current=page>Home</a><a href="about.html" >About</a><a href="research.html" >Research</a><a href="publications.html" >Publications</a><a href="people.html" >People</a><a href="teaching.html" >Teaching</a><a href="contact.html" >Contact</a></div></nav></header><main><div class="hero wrap"><div class="eyebrow">Aquatic ecologist · Louisiana State University</div><h1>Ecology beyond boundaries.</h1><p class="lead">Exploring how energy, nutrients, and contaminants move across aquatic and terrestrial ecosystems—and what these connections mean for food webs and biodiversity in a changing world.</p><a class="button" href="research.html">Explore my research ↗</a></div><img class="hero-image" src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&amp;fit=crop&amp;w=1800&amp;q=85" alt="Forest and freshwater landscape (placeholder photograph)" loading="lazy"><section class="section wrap"><div class="two"><div><div class="eyebrow">Welcome</div><h2>Connecting ecosystems, scales, and ideas.</h2><p>I am an Assistant Professor in the Department of Biological Sciences at Louisiana State University. My research brings together field ecology, stable isotopes, fatty-acid biomarkers, and ecological modeling to study environmental change across freshwater, coastal, and terrestrial ecosystems.</p><a class="text-link" href="about.html">More about me →</a></div><img class="feature-img" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Forest fieldwork landscape (placeholder photograph)" loading="lazy"></div></section><section class="section alt wrap"><div class="eyebrow">Research themes</div><h2>Questions that cross boundaries.</h2><div class="grid"><article class="card"><img class="card-photo" src="https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Aquatic–terrestrial connections (placeholder photograph)" loading="lazy"><div class="card-body"><h3>Aquatic–terrestrial connections</h3><p>How emerging aquatic insects and resource subsidies connect freshwater habitats to terrestrial food webs.</p></div></article><article class="card"><img class="card-photo" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Food webs in a changing world (placeholder photograph)" loading="lazy"><div class="card-body"><h3>Food webs in a changing world</h3><p>How hydroperiod, river management, and climate shape trophic interactions in wetlands and coastal marshes.</p></div></article><article class="card"><img class="card-photo" src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Biodiversity & contaminants (placeholder photograph)" loading="lazy"><div class="card-body"><h3>Biodiversity & contaminants</h3><p>Using invertebrates and ecological tracers to understand freshwater biodiversity and contaminant exposure.</p></div></article></div><p><a class="text-link" href="research.html">View research projects →</a></p></section><section class="section dark wrap"><div class="eyebrow" style="color:#bcd1c4">People & mentoring</div><h2>Science is collaborative.</h2><p class="intro">I mentor undergraduate researchers and collaborate with scientists working across aquatic ecology, biogeochemistry, and conservation.</p><a class="button light" href="people.html">Meet the people →</a></section><section class="section wrap"><div class="eyebrow">Scholarship & teaching</div><h2>Research that informs learning.</h2><div class="grid"><div><h3>Publications</h3><p>Explore research papers and scholarly contributions.</p><a class="text-link" href="publications.html">View publications →</a></div><div><h3>Teaching</h3><p>Ecology, introductory biology, and graduate seminars at LSU.</p><a class="text-link" href="teaching.html">Explore teaching →</a></div><div><h3>Connect</h3><p>Interested in research, collaboration, or mentoring opportunities?</p><a class="text-link" href="contact.html">Get in touch →</a></div></div></section></main><footer class="footer wrap"><div class="footer-inner"><div>© 2026 Sydney Moyo · Department of Biological Sciences, LSU</div><div><a href="mailto:smoyo@lsu.edu">smoyo@lsu.edu</a> · <a href="contact.html">Contact</a></div></div></footer><script src="script.js"></script><script src="content-loader.js" defer></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sydney Moyo's research group at Louisiana State University studies aquatic–terrestrial connections, food webs, biodiversity, and contaminants.">
+  <title>Home | Sydney Moyo</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .home-hero{padding:clamp(55px,8vw,105px) 0 60px;max-width:1000px}
+    .home-hero h1{font-size:clamp(3.3rem,7.4vw,6.2rem);letter-spacing:-.055em;line-height:1.05;margin:18px 0 26px}
+    .home-hero .lead{max-width:830px;font-size:clamp(1.1rem,1.9vw,1.4rem)}
+    .home-button{display:inline-block;background:#173f32;color:#fff!important;text-decoration:none;font-weight:700;padding:13px 23px;border-radius:8px;margin-top:12px}
+    .home-button:hover{background:#102f27}
+    .home-button.light{background:#f7f7f2;color:#173f32!important}
+    .home-banner{width:100%;height:clamp(280px,36vw,480px);object-fit:cover;object-position:center;border-radius:16px}
+    .home-section{padding-block:clamp(55px,7vw,90px)}
+    .home-section h2{max-width:800px}
+    .home-intro{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,70px);align-items:center}
+    .home-intro p{max-width:700px}
+    .home-intro img{width:100%;height:340px;object-fit:cover;border-radius:14px}
+    .home-theme-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:30px}
+    .home-theme{background:#fff;border:1px solid #d8e1d8;border-radius:15px;overflow:hidden;box-shadow:0 5px 20px #173f320b}
+    .home-theme img{width:100%;height:220px;object-fit:cover}
+    .home-theme-body{padding:25px}
+    .home-theme h3{font-size:1.35rem;margin:0 0 13px}
+    .home-theme p{color:#596b60;margin:0}
+    .home-text-link{font-weight:700;color:#173f32;text-decoration-thickness:1px;text-underline-offset:4px}
+    .home-section-footer{margin-top:30px}
+    .home-lab{background:#173f32;color:#f0f5ef;border-radius:18px;padding:clamp(32px,5vw,65px);display:grid;grid-template-columns:1.4fr .6fr;gap:30px;align-items:center}
+    .home-lab h2{color:#fff;font-size:clamp(2rem,3.5vw,3rem)}
+    .home-lab p{color:#e0ebe2;max-width:660px}
+    .home-lab .eyebrow{color:#bcd1c4}
+    .home-lab-action{justify-self:end}
+    .home-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:30px}
+    .home-links article{border-top:2px solid #426c55;padding-top:22px}
+    .home-links h3{font-size:1.35rem}
+    .home-links p{color:#596b60}
+    @media(max-width:850px){.home-theme-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.home-intro{grid-template-columns:1fr}.home-intro img{height:320px}.home-lab{grid-template-columns:1fr}.home-lab-action{justify-self:start}}
+    @media(max-width:600px){.home-hero{padding-top:50px}.home-theme-grid,.home-links{grid-template-columns:1fr}.home-theme img{height:220px}.home-intro img{height:250px}.home-section{padding-block:48px}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <a class="brand" href="index.html"><img src="dragonfly-logo.svg" alt="Sydney Moyo dragonfly logo"></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-links">Menu ☰</button>
+      <div class="nav-links" id="main-links">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="people.html">People</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="wrap home-hero">
+      <div class="eyebrow">Aquatic ecology · Louisiana State University</div>
+      <h1>Ecology beyond boundaries.</h1>
+      <p class="lead">Exploring how energy, nutrients, and contaminants move across aquatic and terrestrial ecosystems—and what these connections mean for food webs and biodiversity in a changing world.</p>
+      <a class="home-button" href="research.html">Explore my research →</a>
+    </section>
+    <div class="wrap">
+      <img class="home-banner" src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&amp;fit=crop&amp;w=1800&amp;q=85" alt="Forest landscape; temporary image to be replaced with research fieldwork photography">
+    </div>
+    <section class="home-section wrap">
+      <div class="home-intro">
+        <div>
+          <div class="eyebrow">Welcome</div>
+          <h2>Connecting ecosystems, scales, and ideas.</h2>
+          <p>I am an Assistant Professor in the Department of Biological Sciences at Louisiana State University. My research broadly focuses on understanding connections across ecosystems and the processes that structure aquatic food webs.</p>
+          <p>I combine field studies, stable isotopes, fatty-acid biomarkers, contaminant analysis, and ecological modeling to investigate freshwater, coastal, and terrestrial systems.</p>
+          <a class="home-text-link" href="about.html">More about me →</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Woodland landscape; temporary photograph" loading="lazy">
+      </div>
+    </section>
+    <section class="home-section wrap" aria-labelledby="home-research-title">
+      <div class="eyebrow">Research themes</div>
+      <h2 id="home-research-title">Questions that cross boundaries.</h2>
+      <p class="lead">Our research connects the movement of resources across ecosystems with the structure of food webs and the ecological consequences of environmental change.</p>
+      <div class="home-theme-grid">
+        <article class="home-theme">
+          <img src="https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Temporary landscape photograph representing cross-ecosystem research" loading="lazy">
+          <div class="home-theme-body"><h3>Cross-Ecosystem Resource Flows</h3><p>Tracing energy, nutrients, and contaminants between aquatic and terrestrial ecosystems, including the role of emerging insects and other resource subsidies.</p></div>
+        </article>
+        <article class="home-theme">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Temporary landscape photograph representing wetland and coastal food webs" loading="lazy">
+          <div class="home-theme-body"><h3>Food Web Structure and Dynamics</h3><p>Understanding trophic interactions and resource pathways in freshwater and coastal ecosystems, including restored marshes and seasonal wetlands.</p></div>
+        </article>
+        <article class="home-theme">
+          <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Temporary nature photograph representing ecological change and conservation" loading="lazy">
+          <div class="home-theme-body"><h3>Environmental Change and Ecological Responses</h3><p>Investigating how land use, hydrology, climate, and other environmental pressures influence biodiversity and ecological interactions.</p></div>
+        </article>
+      </div>
+      <p class="home-section-footer"><a class="home-text-link" href="research.html">Explore research themes and projects →</a></p>
+    </section>
+    <section class="wrap" aria-labelledby="home-lab-title">
+      <div class="home-lab">
+        <div><div class="eyebrow">People &amp; mentoring</div><h2 id="home-lab-title">Science is collaborative.</h2><p>Our research group brings together undergraduate and graduate researchers studying ecological connections, food webs, and environmental change. Mentoring and collaboration are central to how we ask questions and conduct research.</p></div>
+        <div class="home-lab-action"><a class="home-button light" href="people.html">Meet the lab →</a></div>
+      </div>
+    </section>
+    <section class="home-section wrap" aria-labelledby="home-explore-title">
+      <div class="eyebrow">Explore more</div><h2 id="home-explore-title">Research, teaching, and collaboration.</h2>
+      <div class="home-links">
+        <article><h3>Publications</h3><p>Peer-reviewed papers and other scholarly contributions spanning freshwater and coastal ecology.</p><a class="home-text-link" href="publications.html">Browse publications →</a></article>
+        <article><h3>Teaching</h3><p>Undergraduate biology, ecology, and graduate training at Louisiana State University.</p><a class="home-text-link" href="teaching.html">Explore teaching →</a></article>
+        <article><h3>Get in touch</h3><p>Interested in research collaborations, graduate study, or joining the lab?</p><a class="home-text-link" href="contact.html">Contact the lab →</a></article>
+      </div>
+    </section>
+  </main>
+  <footer class="footer wrap"><div class="footer-inner"><div>© 2026 Sydney Moyo · Department of Biological Sciences, LSU</div><div><a href="mailto:smoyo@lsu.edu">smoyo@lsu.edu</a> · <a href="contact.html">Contact</a></div></div></footer>
+  <script src="script.js"></script>
+  <script src="content-loader.js" defer></script>
+</body>
+</html>
