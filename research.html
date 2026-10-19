@@ -64,6 +64,7 @@ document.getElementById('research-intro').textContent=data.body||'';
 list.replaceChildren();
 safeArray(data.items).forEach((theme,i)=>{
 const section=node('section','theme');
+section.id=['aquatic-terrestrial-connections','food-webs-changing-world','biodiversity-contaminants'][i]||('research-theme-'+(i+1));
 const head=node('div','theme-header');
 head.append(node('div','theme-number','Research theme '+(i+1)),node('h2','',theme.title||'Research theme'),node('p','theme-description',theme.description||''));
 section.append(head);
@@ -88,6 +89,7 @@ papers.append(item);
 const all=node('a','all-publications','View all publications →');all.href='publications.html';papers.append(all);
 content.append(projects,papers);section.append(content);list.append(section);
 });
+if(location.hash){const target=document.getElementById(decodeURIComponent(location.hash.slice(1)));if(target)requestAnimationFrame(()=>target.scrollIntoView());}
 }).catch(err=>{list.replaceChildren(node('p','research-error','The research content is temporarily unavailable. Please try refreshing the page.'));console.error(err)});
 })();
 </script>
