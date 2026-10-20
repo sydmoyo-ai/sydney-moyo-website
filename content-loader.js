@@ -80,7 +80,7 @@
     }
   }
   if (location.protocol === 'file:') return;
- fetch('/sydney-moyo-website/' + page + '.json', { cache: 'no-cache' })
+fetch(page + '.json', { cache: 'no-cache' })
     .then(r => { if (!r.ok) throw Error('Content unavailable'); return r.json(); })
     .then(data => {
       if (page === 'people') { renderPeople(data); } else if (page === 'home') {
