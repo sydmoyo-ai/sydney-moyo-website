@@ -1,3 +1,4 @@
+
 {
   "heading": "People",
   "body": "Our group studies how energy, nutrients, and contaminants connect ecosystems. We combine field and laboratory work, ecological tracers, and quantitative modeling to understand food webs and environmental change.",
@@ -10,12 +11,12 @@
       "group": "Principal Investigator",
       "bio": "I am an aquatic ecologist studying how energy, nutrients, and contaminants move across aquatic and terrestrial ecosystems. My research combines field studies, stable isotopes, fatty-acid biomarkers, and ecological modeling.",
       "image": "images/sydney-moyo.jpg",
-      "url": "about.html"
+      "url": "sydney-moyo.html"
     },
     {
       "name": "Kaydence Dubroc",
       "role": "M.S. Student | Freshwater Mussel Ecology",
-      "group": "Current Lab Members",
+      "group": "Graduate Students",
       "bio": "Kaydence's research examines how stable isotopes and fatty-acid biomarkers can be used to study freshwater mussel ecology.",
       "image": "images/kaydence-dubroc.jpg",
       "url": ""
@@ -23,25 +24,49 @@
     {
       "name": "Sarah Kerr",
       "role": "Ph.D. Student | Mercury Contaminant Transfer & Science Communication",
-      "group": "Current Lab Members",
-      "bio": "Sarah's research examines the transfer of mercury from aquatic to terrestrial ecosystems, with a focus on mercury accumulation in arachnids. She is also interested in scientific communication and making ecological research accessible to broader audience",
+      "group": "Graduate Students",
+      "bio": "Sarah's research examines the transfer of mercury from aquatic to terrestrial ecosystems, with a focus on mercury accumulation in arachnids. She is also interested in scientific communication and making ecological research accessible to broader audiences.",
+      "image": "",
+      "url": ""
+    },
+    {
+      "name": "MiKia Alexander",
+      "role": "Undergraduate Researcher",
+      "group": "Undergraduate Researchers",
+      "bio": "MiKia's research examines mercury bioaccumulation in spiders and dragonflies.",
+      "image": "",
+      "url": ""
+    },
+    {
+      "name": "Ava Shepard",
+      "role": "Undergraduate Researcher",
+      "group": "Undergraduate Researchers",
+      "bio": "",
+      "image": "",
+      "url": ""
+    },
+    {
+      "name": "Addyson Moore",
+      "role": "Undergraduate Researcher",
+      "group": "Undergraduate Researchers",
+      "bio": "",
+      "image": "",
+      "url": ""
+    },
+    {
+      "name": "Laila Andrews",
+      "role": "Undergraduate Researcher",
+      "group": "Undergraduate Researchers",
+      "bio": "",
       "image": "",
       "url": ""
     },
     {
       "name": "Lenin Chari",
-      "role": "Postdoctoral Reseacher",
+      "role": "Postdoctoral Researcher",
       "group": "Alumni",
-      "bio": "Lenin worked  aquatic–terrestrial linkages in Louisiana streams",
+      "bio": "Lenin worked on aquatic–terrestrial linkages in Louisiana streams.",
       "image": "images/lenin-chari.png",
-      "url": ""
-    },
-    {
-      "name": "Mikia Alexander",
-      "role": "Undergraduate Researcher",
-      "group": "Current Lab Members",
-      "bio": "MiKia's research examines mercury bioaccumulation in spiders and dragonflies",
-      "image": "",
       "url": ""
     },
     {
@@ -61,11 +86,12 @@
       "url": ""
     },
     {
+      "name": "Eduardo Howell",
       "role": "Undergraduate Researcher | Fatty-Acid Analysis",
       "group": "Alumni",
-      "name": "Eduardo Howell",
+      "bio": "Eduardo was part of our fatty-acid team! He contributed to laboratory research by preparing biological samples and conducting fatty-acid extractions, helping us investigate food webs and resource use across ecosystems.",
       "image": "images/eduardo-howell.png",
-      "bio": "Eduardo was part of our fatty-acid team! He contributed to laboratory research by preparing biological samples and conducting fatty-acid extractions, helping us investigate food webs and resource use across ecosystems."
+      "url": ""
     }
   ]
 }
