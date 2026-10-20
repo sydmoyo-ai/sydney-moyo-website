@@ -38,7 +38,7 @@ h1{font-family:Georgia,serif;color:var(--pub-green);font-size:clamp(2.7rem,6vw,4
 <script>
 (()=>{
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const highlight=s=>esc(s).replace(/\b(Sydney\s+Moyo|Moyo\s*,?\s*S\.?)(?=\b|,)/gi,'<strong>$1</strong>');
+const highlight=s=>esc(s).replace(/\b(Sydney\s+Moyo|Moyo\s*,?\s*S\.?(?:\s*,?\s*[A-Z]\.)?)(?=\s|,|&|$)/gi,'<strong>$1</strong>');
 let all=[];
 function render(){const q=document.getElementById('pub-search').value.toLocaleLowerCase().trim();const items=all.filter(x=>[x.title,x.authors,x.journal,x.year,x.details].join(' ').toLocaleLowerCase().includes(q));const articles=items.filter(x=>x.type==='article'),other=items.filter(x=>x.type!=='article');let out='';
 function section(arr,heading){if(!arr.length)return '';let h=`<h2 class="pub-section">${heading}</h2>`;let prev=null;for(const x of arr){if(x.year!==prev){h+=`<h3 class="pub-year">${esc(x.year)}</h3>`;prev=x.year;}h+=`<article class="pub-item"><div class="pub-title">${esc(x.title)}</div><p class="pub-authors">${highlight(x.authors)}</p><div class="pub-journal">${esc(x.journal)}${x.details?', '+esc(x.details):''}</div>${x.doi?`<a class="pub-doi" href="https://doi.org/${encodeURIComponent(x.doi)}" target="_blank" rel="noopener noreferrer">DOI ↗</a>`:''}${x.status?`<span class="pub-status">${esc(x.status)}</span>`:''}</article>`;}return h;}
