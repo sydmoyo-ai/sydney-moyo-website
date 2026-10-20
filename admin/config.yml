@@ -2,6 +2,9 @@ backend:
   name: github
   repo: sydmoyo-ai/sydney-moyo-website
   branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+  site_domain: majestic-mandazi-d59848.netlify.app
 
 media_folder: "images"
 public_folder: "/images"
