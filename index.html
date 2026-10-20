@@ -13,7 +13,29 @@
     .home-button{display:inline-block;background:#173f32;color:#fff!important;text-decoration:none;font-weight:700;padding:13px 23px;border-radius:8px;margin-top:12px}
     .home-button:hover{background:#102f27}
     .home-button.light{background:#f7f7f2;color:#173f32!important}
-    .home-banner{width:100%;height:clamp(280px,36vw,480px);object-fit:cover;object-position:center;border-radius:16px}
+   .home-collage{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  grid-template-rows:repeat(2, 190px);
+  gap:10px;
+  overflow:hidden;
+  border-radius:16px;
+}
+.home-collage img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.home-collage img:first-child{
+  grid-row:span 2;
+}
+@media(max-width:600px){
+  .home-collage{
+    grid-template-rows:repeat(2, 130px);
+    gap:6px;
+  }
+}
     .home-section{padding-block:clamp(55px,7vw,90px)}
     .home-section h2{max-width:800px}
     .home-intro{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,70px);align-items:center}
@@ -65,8 +87,12 @@
       <a class="home-button" href="research.html">Explore my research →</a>
     </section>
     <div class="wrap">
-      <img class="home-banner" src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&amp;fit=crop&amp;w=1800&amp;q=85" alt="Forest landscape; temporary image to be replaced with research fieldwork photography">
-    </div>
+  <div class="home-collage">
+    <img src="images/homepage-fieldwork.jpg" alt="Researchers conducting ecological fieldwork">
+    <img src="images/homepage-stream.jpg" alt="Freshwater stream ecosystem">
+    <img src="images/homepage-damselfly.jpg" alt="Damselfly photographed during biodiversity research">
+  </div>
+</div>
     <section class="home-section wrap">
       <div class="home-intro">
         <div>
@@ -76,7 +102,7 @@
           <p>I combine field studies, stable isotopes, fatty-acid biomarkers, contaminant analysis, and ecological modeling to investigate freshwater, coastal, and terrestrial systems.</p>
           <a class="home-text-link" href="sydney-moyo.html">More about me →</a>
         </div>
-        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Woodland landscape; temporary photograph" loading="lazy">
+        <img src="images/homepage-fieldwork.jpg" alt="Woodland landscape; temporary photograph" loading="lazy">
       </div>
     </section>
     <section class="home-section wrap" aria-labelledby="home-research-title">
@@ -85,15 +111,15 @@
       <p class="lead">Our research connects the movement of resources across ecosystems with the structure of food webs and the ecological consequences of environmental change.</p>
       <div class="home-theme-grid">
         <a class="home-theme home-theme-link" href="research.html#aquatic-terrestrial-connections">
-          <img src="https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Landscape representing aquatic and terrestrial ecosystems" loading="lazy">
+          <img src="images/research-emergence-traps.jpg" alt="Landscape representing aquatic and terrestrial ecosystems" loading="lazy">
           <div class="home-theme-body"><h3>Aquatic–terrestrial connections</h3><p>Understanding how energy, nutrients, and contaminants move across ecosystem boundaries, and how these exchanges influence food webs and consumers.</p></div>
         </a>
         <a class="home-theme home-theme-link" href="research.html#food-webs-changing-world">
-          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Landscape representing wetlands and coastal food webs" loading="lazy">
+          <img src="images/research-food-webs.jpg" alt="Landscape representing wetlands and coastal food webs" loading="lazy">
           <div class="home-theme-body"><h3>Food webs in a changing world</h3><p>Investigating how climate change, freshwater management, restoration, and species invasions affect the structure and functioning of aquatic food webs.</p></div>
         </a>
         <a class="home-theme home-theme-link" href="research.html#biodiversity-contaminants">
-          <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Nature photograph representing biodiversity and contaminants" loading="lazy">
+          <img src="images/research-biodiversity.jpg" alt="Nature photograph representing biodiversity and contaminants" loading="lazy">
           <div class="home-theme-body"><h3>Biodiversity and contaminants</h3><p>Examining freshwater biodiversity and the distribution, accumulation, and movement of contaminants across aquatic and terrestrial ecosystems.</p></div>
         </a>
       </div>
