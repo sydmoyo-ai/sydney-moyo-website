@@ -49,7 +49,13 @@
     setText('#people-join-heading', data.join_heading);
     setText('#people-join-text', data.join_text);
     target.replaceChildren();
-    const groups = ['Principal Investigator', 'Current Lab Members', 'Postdoctoral Researchers', 'Alumni'];
+    const groups = [
+  'Principal Investigator',
+  'Graduate Students',
+  'Undergraduate Researchers',
+  'Postdoctoral Researchers',
+  'Alumni'
+];
     function portrait(person) {
       if (person.image) { const img = el('img','people-portrait'); img.src=person.image; img.alt='Portrait of '+person.name; img.loading='lazy'; return img; }
       const placeholder = el('div','people-placeholder'); placeholder.setAttribute('aria-label','Photo coming soon'); placeholder.textContent=(person.name||'?').split(/\s+/).slice(0,2).map(x=>x[0]).join('').toUpperCase(); return placeholder;
