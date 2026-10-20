@@ -77,6 +77,27 @@ section.id=['aquatic-terrestrial-connections','food-webs-changing-world','biodiv
 const head=node('div','theme-header');
 head.append(node('div','theme-number','Research theme '+(i+1)),node('h2','',theme.title||'Research theme'),node('p','theme-description',theme.description||''));
 section.append(head);
+
+// Add a photograph for each research theme
+const themePhotos = [
+  'images/research-emergence-traps.jpg',
+  'images/research-food-webs.jpg',
+  'images/research-biodiversity.jpg'
+];
+
+const themePhotoDescriptions = [
+  'Aquatic insect emergence traps used in field research',
+  'Wetland ecosystem representing aquatic food-web research',
+  'Damselfly representing freshwater biodiversity research'
+];
+
+if (themePhotos[i]) {
+  const photo = node('img', 'theme-photo');
+  photo.src = themePhotos[i];
+  photo.alt = themePhotoDescriptions[i];
+  photo.loading = 'lazy';
+  section.append(photo);
+};
 const content=node('div','theme-content');
 const projects=node('div','');
 projects.append(node('h3','','Current and ongoing projects'));
