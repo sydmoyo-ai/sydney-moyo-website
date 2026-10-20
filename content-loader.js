@@ -65,12 +65,7 @@
       if (!people.length) continue;
       const section=el('section','people-section');
       section.append(el('h2','people-title',group));
-     const grid=el('div',
-  group==='Principal Investigator' ? 'people-pi' :
-  group==='Graduate Students' ? 'people-graduate-grid' :
-  group==='Alumni' ? 'people-alumni' :
-  'people-card-grid'
-);
+     const grid = el('div', group === 'Principal Investigator' ? 'people-pi' : group === 'Graduate Students' ? 'people-graduate-grid' : group === 'Alumni' ? 'people-alumni' : 'people-card-grid');
       for (const person of people) {
         const card=el('article','people-card');
         const photo=portrait(person);
