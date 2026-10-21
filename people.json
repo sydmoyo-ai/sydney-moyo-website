@@ -1,9 +1,8 @@
-
 {
   "heading": "People",
   "body": "Our group studies how energy, nutrients, and contaminants connect ecosystems. We combine field and laboratory work, ecological tracers, and quantitative modeling to understand food webs and environmental change.",
   "join_heading": "Join the Lab",
-  "join_text": "Interested in undergraduate research, graduate study, or postdoctoral opportunities? Get in touch to discuss potential projects and opportunities.",
+  "join_text": "Interested in joining our research group as an undergraduate, graduate student, or postdoctoral researcher?",
   "items": [
     {
       "name": "Sydney Moyo",
@@ -80,9 +79,9 @@
     {
       "name": "Ava Benfiglio",
       "role": "Undergraduate Researcher | Stable Isotope Analysis",
-       "group": "Alumni",
-       "bio": "Ava contributed to laboratory research involving stable isotope analysis, supporting our work on food webs and resource use across ecosystems.",
-       "image": "",
+      "group": "Alumni",
+      "bio": "Ava contributed to laboratory research involving stable isotope analysis, supporting our work on food webs and resource use across ecosystems.",
+      "image": "",
       "url": ""
     },
     {
