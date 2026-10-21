@@ -248,6 +248,55 @@ function renderContact(data) {
   }
 }
 
+function renderBiography(data) {
+  setText('.profile-top h1', data.name);
+  setText('.profile-top .eyebrow', data.position);
+  setText('.profile-top .lead', data.intro);
+
+  const sections = document.querySelectorAll('.profile-content > section');
+  if (sections.length < 3) return;
+
+  function updateSection(section, heading, paragraphs) {
+    const h2 = section.querySelector('h2');
+    if (h2 && heading != null) h2.textContent = heading;
+
+    if (!Array.isArray(paragraphs)) return;
+
+    // Remove only paragraphs, preserving links and buttons.
+    section.querySelectorAll(':scope > p').forEach(p => p.remove());
+
+    const headingElement = section.querySelector('h2');
+    let previous = headingElement;
+
+    paragraphs.forEach(text => {
+      const paragraph = document.createElement('p');
+      paragraph.textContent = text;
+      previous.after(paragraph);
+      previous = paragraph;
+    });
+  }
+
+  updateSection(
+    sections[0],
+    data.about_heading,
+    data.about_paragraphs
+  );
+
+  updateSection(
+    sections[1],
+    data.beyond_heading,
+    data.beyond_paragraphs
+  );
+
+  setText('.profile-content section:nth-child(3) h2', data.connect_heading);
+  setText('.profile-content section:nth-child(3) p', data.connect_text);
+
+  const scholarLink = sections[2].querySelector('a[href*="scholar.google.com"]');
+  if (scholarLink && data.scholar_url) {
+    scholarLink.href = data.scholar_url;
+  }
+}
+
   if (location.protocol === 'file:') return;
 fetch(page + '.json', { cache: 'no-cache' })
     .then(r => { if (!r.ok) throw Error('Content unavailable'); return r.json(); })
@@ -260,6 +309,9 @@ fetch(page + '.json', { cache: 'no-cache' })
        else if (page === 'contact') {
   renderContact(data);
 }  
+         else if (page === 'sydney-moyo') {
+  renderBiography(data);
+}
        else if (page === 'home') {
         setText('.home-hero h1', data.headline);
 setText('.home-hero .lead', data.intro);
