@@ -22,6 +22,9 @@ collections:
           - {label: "Headline", name: "headline", widget: "string"}
           - {label: "Intro", name: "intro", widget: "text"}
           - {label: "Hero image", name: "hero_image", widget: "image", required: false}
+          - {label: "Collage - large left photograph", name: "collage_left", widget: "image", required: false}
+          - {label: "Collage - upper right photograph", name: "collage_top_right", widget: "image", required: false}
+          - {label: "Collage - lower right photograph", name: "collage_bottom_right", widget: "image", required: false}
           - {label: "Welcome heading", name: "welcome_heading", widget: "string"}
           - {label: "Welcome text", name: "welcome_text", widget: "text"}
           - {label: "Welcome image", name: "welcome_image", widget: "image", required: false}
