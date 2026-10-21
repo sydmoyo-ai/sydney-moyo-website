@@ -102,13 +102,36 @@ collections:
               - {label: "Portrait", name: "image", widget: "image", required: false}
               - {label: "Profile URL", name: "url", widget: "string", required: false}
 
+     
       # TEACHING
       - label: "Teaching"
         name: "teaching"
         file: "teaching.json"
         fields:
           - {label: "Page heading", name: "heading", widget: "string"}
-          - {label: "Page text", name: "body", widget: "text"}
+
+          - {label: "Teaching philosophy heading", name: "philosophy_heading", widget: "string"}
+          - label: "Teaching philosophy paragraphs"
+            name: "philosophy_paragraphs"
+            widget: "list"
+            field: {label: "Paragraph", name: "paragraph", widget: "text"}
+
+          - {label: "Courses heading", name: "courses_heading", widget: "string"}
+          - label: "Courses at LSU"
+            name: "courses"
+            widget: "list"
+            summary: "{{fields.code}} — {{fields.title}}"
+            fields:
+              - {label: "Course code", name: "code", widget: "string"}
+              - {label: "Course title", name: "title", widget: "string"}
+              - {label: "Course description", name: "description", widget: "text"}
+
+          - {label: "Learning by doing heading", name: "learning_heading", widget: "string"}
+          - {label: "Learning by doing text", name: "learning_text", widget: "text"}
+
+          - {label: "Student mentorship heading", name: "mentorship_heading", widget: "string"}
+          - {label: "Student mentorship text", name: "mentorship_text", widget: "text"}
+
 
       # CONTACT
       - label: "Contact"
