@@ -263,8 +263,17 @@ fetch(page + '.json', { cache: 'no-cache' })
        else if (page === 'home') {
         setText('.home-hero h1', data.headline);
 setText('.home-hero .lead', data.intro);
-        setText('.home-intro h2', data.welcome_heading);
-setText('.home-intro p', data.welcome_text);
+       setText('.home-intro h2', data.welcome_heading);
+
+const welcomeParagraphs = document.querySelectorAll('.home-intro p');
+
+if (welcomeParagraphs[0] && data.welcome_text != null) {
+  welcomeParagraphs[0].textContent = data.welcome_text;
+}
+
+if (welcomeParagraphs[1] && data.welcome_text_2 != null) {
+  welcomeParagraphs[1].textContent = data.welcome_text_2;
+}
         // Homepage collage photographs
 setImage('.home-collage img:nth-child(1)', data.collage_left);
 setImage('.home-collage img:nth-child(2)', data.collage_top_right);
