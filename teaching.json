@@ -1,12 +1,14 @@
-
 {
+  "mentorship_heading": "Student mentorship",
+  "learning_heading": "Learning by ding",
   "heading": "Teaching and mentoring",
-  "philosophy_heading": "Teaching philosophy",
+  "learning_text": "I want students to do more than recall terminology: I want them to practise thinking like biologists. In introductory biology, I use regular reviews and in-class questions to help students assess their understanding. In ecology, students work through population models, interpret graphs, read and annotate research papers, and discuss what their results mean biologically. These activities connect ecological theory with the process of scientific inquiry.",
+  "mentorship_text": "Mentoring undergraduate and graduate researchers is an important extension of my teaching. I work with students to develop skills in field and laboratory methods, data analysis, scientific writing, and communicating research findings. Because students bring different experiences and goals to the lab, I aim to provide guidance suited to their needs while encouraging them to become increasingly independent researchers.",
   "philosophy_paragraphs": [
     "My goals as a teacher are to expand students' knowledge of the natural world and help them develop the critical thinking skills needed to evaluate scientific ideas. I approach these goals by fostering a learning environment where students actively engage in scientific inquiry, make connections between biological concepts and the world around them, and develop the confidence to think independently as biologists.",
     "In my courses, I encourage students to move beyond memorising biological concepts toward applying what they learn. Through quantitative problem-solving, interpretation of biological data, discussions of primary literature, and real-world examples, I aim to help students develop the analytical and communication skills needed to understand and investigate biological questions. Above all, I want students to leave my courses not only with a stronger understanding of biology, but also with the ability to think critically about the natural world."
   ],
-  "courses_heading": "Courses at LSU",
+  "philosophy_heading": "Teaching philosophy",
   "courses": [
     {
       "code": "BIOL 1202",
@@ -19,8 +21,5 @@
       "description": "An exploration of how organisms interact with one another and their environments, spanning populations, communities, ecosystems, and conservation. Students work with ecological models, interpret scientific literature, solve quantitative problems, and apply ecological theory to real-world questions."
     }
   ],
-  "learning_heading": "Learning by doing",
-  "learning_text": "I want students to do more than recall terminology: I want them to practise thinking like biologists. In introductory biology, I use regular reviews and in-class questions to help students assess their understanding. In ecology, students work through population models, interpret graphs, read and annotate research papers, and discuss what their results mean biologically. These activities connect ecological theory with the process of scientific inquiry.",
-  "mentorship_heading": "Student mentorship",
-  "mentorship_text": "Mentoring undergraduate and graduate researchers is an important extension of my teaching. I work with students to develop skills in field and laboratory methods, data analysis, scientific writing, and communicating research findings. Because students bring different experiences and goals to the lab, I aim to provide guidance suited to their needs while encouraging them to become increasingly independent researchers."
+  "courses_heading": "Courses at LSU"
 }
