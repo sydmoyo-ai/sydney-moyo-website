@@ -133,11 +133,58 @@ collections:
           - {label: "Student mentorship text", name: "mentorship_text", widget: "text"}
 
 
+     
       # CONTACT
       - label: "Contact"
         name: "contact"
         file: "contact.json"
         fields:
           - {label: "Page heading", name: "heading", widget: "string"}
-          - {label: "Page text", name: "body", widget: "text"}
+          - {label: "Page introduction", name: "body", widget: "text"}
           - {label: "Contact email", name: "email", widget: "string"}
+
+          - label: "Graduate students"
+            name: "graduate"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: {label: "Paragraph", name: "paragraph", widget: "text"}
+              - {label: "Ph.D. questionnaire URL", name: "questionnaire_url", widget: "string"}
+              - {label: "LSU Graduate School URL", name: "graduate_school_url", widget: "string"}
+              - {label: "Biological Sciences program URL", name: "program_url", widget: "string"}
+
+          - label: "Postdoctoral positions"
+            name: "postdoc"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: {label: "Paragraph", name: "paragraph", widget: "text"}
+              - label: "Application requirements"
+                name: "requirements"
+                widget: "list"
+                field: {label: "Requirement", name: "requirement", widget: "string"}
+              - {label: "Funding note", name: "note", widget: "text"}
+
+          - label: "Undergraduate students"
+            name: "undergraduate"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Undergraduate questionnaire URL", name: "questionnaire_url", widget: "string"}
+
+          - label: "Collaborations"
+            name: "collaborations"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: {label: "Paragraph", name: "paragraph", widget: "text"}
