@@ -142,6 +142,112 @@
     }
   }
 
+function renderContact(data) {
+  setText('.contact-hero h1', data.heading);
+  setText('.contact-hero .lead', data.body);
+
+  const emailLink = document.querySelector('.contact-hero a[href^="mailto:"]');
+  if (emailLink && data.email) {
+    emailLink.textContent = data.email;
+    emailLink.href = 'mailto:' + data.email;
+  }
+
+  const cards = document.querySelectorAll('.contact-grid .contact-card');
+  if (cards.length < 4) return;
+
+  function updateParagraphs(card, paragraphs) {
+    if (!Array.isArray(paragraphs)) return;
+    const existing = card.querySelectorAll(':scope > p:not(.contact-note)');
+    paragraphs.forEach((text, index) => {
+      if (existing[index]) existing[index].textContent = text;
+    });
+  }
+
+  function updateButtons(card, email, subject, questionnaireUrl) {
+    const buttons = card.querySelectorAll('.contact-button');
+    buttons.forEach(button => {
+      if (button.href.startsWith('mailto:') && email) {
+        button.href = 'mailto:' + email + '?subject=' + encodeURIComponent(subject);
+      } else if (!button.href.startsWith('mailto:') && questionnaireUrl) {
+        button.href = questionnaireUrl;
+      }
+    });
+  }
+
+  if (data.graduate) {
+    const card = cards[0];
+    const g = data.graduate;
+    setCardHeading(card, g.heading);
+    updateParagraphs(card, g.paragraphs);
+
+    const firstParagraph = card.querySelector('p');
+    if (firstParagraph && g.graduate_school_url && g.program_url) {
+      firstParagraph.innerHTML = '';
+      firstParagraph.append(
+        'Prospective graduate students can apply to LSU’s Biological Sciences graduate program through the '
+      );
+      appendLink(firstParagraph, 'LSU Graduate School', g.graduate_school_url);
+      firstParagraph.append('. For details about the program, visit the ');
+      appendLink(firstParagraph, 'Biological Sciences Graduate Program', g.program_url);
+      firstParagraph.append('.');
+    }
+
+    updateButtons(card, data.email, 'Prospective graduate student', g.questionnaire_url);
+  }
+
+  if (data.postdoc) {
+    const card = cards[1];
+    const p = data.postdoc;
+    setCardHeading(card, p.heading);
+    updateParagraphs(card, p.paragraphs);
+
+    const list = card.querySelector('ul');
+    if (list && Array.isArray(p.requirements)) {
+      list.replaceChildren();
+      p.requirements.forEach(requirement => {
+        list.append(el('li', '', requirement));
+      });
+    }
+
+    const note = card.querySelector('.contact-note');
+    if (note && p.note != null) note.textContent = p.note;
+    updateButtons(card, data.email, 'Postdoctoral research inquiry');
+  }
+
+  if (data.undergraduate) {
+    const card = cards[2];
+    const u = data.undergraduate;
+    setCardHeading(card, u.heading);
+    const paragraph = card.querySelector('p');
+    if (paragraph && u.description != null) {
+      paragraph.textContent = u.description;
+    }
+    updateButtons(card, data.email, 'Undergraduate research inquiry', u.questionnaire_url);
+  }
+
+  if (data.collaborations) {
+    const card = cards[3];
+    const c = data.collaborations;
+    setCardHeading(card, c.heading);
+    updateParagraphs(card, c.paragraphs);
+    updateButtons(card, data.email, 'Potential research collaboration');
+  }
+
+  function setCardHeading(card, heading) {
+    const h2 = card.querySelector('h2');
+    if (h2 && heading) h2.textContent = heading;
+  }
+
+  function appendLink(parent, label, url) {
+    const a = document.createElement('a');
+    a.href = url;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.textContent = label;
+    parent.append(a);
+  }
+}
+
   if (location.protocol === 'file:') return;
 fetch(page + '.json', { cache: 'no-cache' })
     .then(r => { if (!r.ok) throw Error('Content unavailable'); return r.json(); })
@@ -150,7 +256,11 @@ fetch(page + '.json', { cache: 'no-cache' })
         renderPeople(data);
       } else if (page === 'teaching') {
         renderTeaching(data);
-      } else if (page === 'home') {
+      } 
+       else if (page === 'contact') {
+  renderContact(data);
+}  
+       else if (page === 'home') {
         setText('.hero h1', data.headline); setText('.hero .lead', data.intro);
         setText('.two h2', data.welcome_heading); setText('.two p', data.welcome_text);
         setImage('.hero-image', data.hero_image); setImage('.feature-img', data.welcome_image);
