@@ -261,7 +261,8 @@ fetch(page + '.json', { cache: 'no-cache' })
   renderContact(data);
 }  
        else if (page === 'home') {
-        setText('.hero h1', data.headline); setText('.hero .lead', data.intro);
+        setText('.home-hero h1', data.headline);
+setText('.home-hero .lead', data.intro);
         setText('.two h2', data.welcome_heading); setText('.two p', data.welcome_text);
         setImage('.hero-image', data.hero_image); setImage('.feature-img', data.welcome_image);
         const cards = document.querySelectorAll('.card');
