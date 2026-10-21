@@ -27,6 +27,7 @@ collections:
           - {label: "Collage - lower right photograph", name: "collage_bottom_right", widget: "image", required: false}
           - {label: "Welcome heading", name: "welcome_heading", widget: "string"}
           - {label: "Welcome text", name: "welcome_text", widget: "text"}
+          - {label: "Welcome second paragraph", name: "welcome_text_2", widget: "text", required: false}
           - {label: "Welcome image", name: "welcome_image", widget: "image", required: false}
 
       # RESEARCH
