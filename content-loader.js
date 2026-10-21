@@ -281,7 +281,7 @@ setImage('.home-collage img:nth-child(3)', data.collage_bottom_right);
 
 // Welcome section photograph
 setImage('.home-intro img', data.welcome_image);
-        const cards = document.querySelectorAll('.card');
+        const cards = document.querySelectorAll('.home-theme');
         fetch('/sydney-moyo-website/research.json').then(r => r.json()).then(research => {
           (research.items || []).slice(0, 3).forEach((item, i) => {
             if (!cards[i]) return;
