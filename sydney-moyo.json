@@ -1,20 +1,19 @@
-
 {
-  "name": "Sydney Moyo",
+  "connect_text": "I am always happy to hear from fellow ecologists. I welcome conversations about research collaborations, student opportunities, and shared interests in aquatic ecology and conservation.",
   "position": "Principal Investigator · Louisiana State University",
+  "name": "Sydney Moyo",
   "intro": "I am an Assistant Professor in the Department of Biological Sciences at Louisiana State University. My work explores the connections between ecosystems, particularly how energy, nutrients, and contaminants move through freshwater, coastal, and terrestrial food webs.",
+  "connect_heading": "Connect",
   "about_heading": "A little about me",
-  "about_paragraphs": [
-    "I was born in Harare, Zimbabwe, and have always had a curiosity about the natural world. Somewhere along the way, that curiosity turned into a career in zoology and aquatic ecology. I am now an Assistant Professor in the Department of Biological Sciences at Louisiana State University, where I spend much of my time thinking about food webs, ecosystems, and how everything is connected.",
-    "One of the things I enjoy most about being a scientist is that there is always something new to learn, a question worth asking, or an opportunity to explore somewhere new. I also enjoy working with students and colleagues who bring different perspectives and ideas to the table."
-  ],
   "beyond_heading": "Beyond science",
   "beyond_paragraphs": [
     "When I am not thinking about food webs or staring at data, there is a good chance I am on a bicycle. I love cycling and currently ride a Scott Addict 10 and a Scott Addict Gravel. Whether on the road or gravel, I enjoy getting outside, exploring new routes, and occasionally convincing myself that I am faster than I actually am.",
     "When I am not riding, I enjoy watching professional cycling, particularly the three Grand Tours: the Tour de France, Giro d’Italia, and Vuelta a España. My favorite rider is Tadej Pogačar, whose performances are both inspiring and a reminder of just how far I am from making it into the professional peloton!",
     "Between studying ecosystems and following professional cycling, I seem to spend a lot of time thinking about endurance, competition, and what makes things work."
   ],
-  "connect_heading": "Connect",
-  "connect_text": "I welcome conversations about research collaborations, student opportunities, and shared interests in aquatic ecology and conservation.",
-  "scholar_url": "https://scholar.google.com/citations?user=BjYjYKEAAAAJ&hl=en"
+  "scholar_url": "https://scholar.google.com/citations?user=BjYjYKEAAAAJ&hl=en",
+  "about_paragraphs": [
+    "I was born in Harare, Zimbabwe, and have always had a curiosity about the natural world. Somewhere along the way, that curiosity turned into a career in zoology and aquatic ecology. I am now an Assistant Professor in the Department of Biological Sciences at Louisiana State University, where I spend much of my time thinking about food webs, ecosystems, and how everything is connected.",
+    "One of the things I enjoy most about being a scientist is that there is always something new to learn, a question worth asking, or an opportunity to explore somewhere new. I also enjoy working with students and colleagues who bring different perspectives and ideas to the table."
+  ]
 }
