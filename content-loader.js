@@ -79,6 +79,69 @@
       section.append(grid);target.append(section);
     }
   }
+ 
+  function renderTeaching(data) {
+    const sections = document.querySelectorAll(
+      '.teaching-content .teaching-section'
+    );
+    if (sections.length < 4) return;
+
+    setText('.page-hero h1', data.heading);
+
+    // Teaching philosophy
+    const philosophy = sections[0];
+    const philosophyHeading = philosophy.querySelector('h2');
+    if (philosophyHeading && data.philosophy_heading) {
+      philosophyHeading.textContent = data.philosophy_heading;
+    }
+    if (Array.isArray(data.philosophy_paragraphs)) {
+      philosophy.querySelectorAll('p').forEach(p => p.remove());
+      data.philosophy_paragraphs.forEach(paragraph => {
+        philosophy.append(el('p', '', paragraph));
+      });
+    }
+
+    // Courses at LSU
+    const coursesSection = sections[1];
+    const coursesHeading = coursesSection.querySelector('h2');
+    if (coursesHeading && data.courses_heading) {
+      coursesHeading.textContent = data.courses_heading;
+    }
+    const courseGrid = coursesSection.querySelector('.course-grid');
+    if (courseGrid && Array.isArray(data.courses)) {
+      courseGrid.replaceChildren();
+      data.courses.forEach(course => {
+        const card = el('article', 'course-card');
+        card.append(el('div', 'course-code', course.code || ''));
+        card.append(el('h3', '', course.title || ''));
+        card.append(el('p', '', course.description || ''));
+        courseGrid.append(card);
+      });
+    }
+
+    // Learning by doing
+    const learning = sections[2];
+    const learningHeading = learning.querySelector('h2');
+    if (learningHeading && data.learning_heading) {
+      learningHeading.textContent = data.learning_heading;
+    }
+    const learningParagraph = learning.querySelector('p');
+    if (learningParagraph && data.learning_text != null) {
+      learningParagraph.textContent = data.learning_text;
+    }
+
+    // Student mentorship
+    const mentorship = sections[3];
+    const mentorshipHeading = mentorship.querySelector('h2');
+    if (mentorshipHeading && data.mentorship_heading) {
+      mentorshipHeading.textContent = data.mentorship_heading;
+    }
+    const mentorshipParagraph = mentorship.querySelector('p');
+    if (mentorshipParagraph && data.mentorship_text != null) {
+      mentorshipParagraph.textContent = data.mentorship_text;
+    }
+  }
+
   if (location.protocol === 'file:') return;
 fetch(page + '.json', { cache: 'no-cache' })
     .then(r => { if (!r.ok) throw Error('Content unavailable'); return r.json(); })
