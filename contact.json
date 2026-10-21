@@ -1,5 +1,41 @@
+
 {
-  "heading": "Connect",
-  "body": "For research collaborations, prospective students, and other inquiries, please get in touch.",
-  "email": "smoyo@lsu.edu"
+  "heading": "Contact & opportunities",
+  "body": "I welcome inquiries from prospective students, postdoctoral researchers, and potential collaborators interested in aquatic ecology, food webs, biodiversity, and environmental change.",
+  "email": "smoyo@lsu.edu",
+  "graduate": {
+    "heading": "Graduate students",
+    "paragraphs": [
+      "Prospective graduate students can apply to LSU’s Biological Sciences graduate program through the LSU Graduate School. For details about the program, visit the Biological Sciences Graduate Program.",
+      "I am currently considering prospective Ph.D. students. If you are interested in joining my lab, please complete the online questionnaire and upload your CV or résumé through the form. You are also welcome to email me with questions."
+    ],
+    "questionnaire_url": "https://tally.so/r/gbjEED",
+    "graduate_school_url": "https://www.lsu.edu/graduateschool/",
+    "program_url": "https://www.lsu.edu/science/biosci/programs/graduate/index.php"
+  },
+  "postdoc": {
+    "heading": "Postdoctoral positions",
+    "paragraphs": [
+      "I welcome inquiries from prospective postdoctoral fellows interested in trophic ecology, ecosystem functioning, and spider and insect ecology, including research that connects these areas to broader ecological questions.",
+      "Please email me the following:"
+    ],
+    "requirements": [
+      "A cover letter summarizing your major research accomplishments and future research interests",
+      "Your CV",
+      "Contact information for three references"
+    ],
+    "note": "Opportunities depend on available funding and project fit."
+  },
+  "undergraduate": {
+    "heading": "Undergraduate students",
+    "description": "Undergraduate students interested in gaining research experience in the lab are encouraged to complete the online questionnaire and upload a CV or résumé through the form. You are also welcome to email me with questions.",
+    "questionnaire_url": "https://tally.so/r/laDpBW"
+  },
+  "collaborations": {
+    "heading": "Collaborations",
+    "paragraphs": [
+      "I enjoy working with researchers across disciplines and welcome opportunities to collaborate on questions related to aquatic and terrestrial ecosystems, trophic ecology, biodiversity, contaminants, and ecological modeling.",
+      "If you have an idea for a collaboration, please send me a brief description of your project or question. I would be happy to discuss areas of shared interest."
+    ]
+  }
 }
