@@ -192,3 +192,32 @@ collections:
                 name: "paragraphs"
                 widget: "list"
                 field: {label: "Paragraph", name: "paragraph", widget: "text"}
+
+
+      # ABOUT SYDNEY
+      - label: "About Sydney"
+        name: "sydney-moyo"
+        file: "sydney-moyo.json"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Position", name: "position", widget: "string"}
+          - {label: "Introduction", name: "intro", widget: "text"}
+
+          - {label: "About heading", name: "about_heading", widget: "string"}
+          - label: "A little about me - paragraphs"
+            name: "about_paragraphs"
+            widget: "list"
+            field: {label: "Paragraph", name: "paragraph", widget: "text"}
+
+          - {label: "Beyond science heading", name: "beyond_heading", widget: "string"}
+          - label: "Beyond science - paragraphs"
+            name: "beyond_paragraphs"
+            widget: "list"
+            field: {label: "Paragraph", name: "paragraph", widget: "text"}
+
+          - {label: "Connect heading", name: "connect_heading", widget: "string"}
+          - {label: "Connect text", name: "connect_text", widget: "text"}
+          - {label: "Google Scholar URL", name: "scholar_url", widget: "string"}
+
+
+
