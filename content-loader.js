@@ -264,7 +264,13 @@ fetch(page + '.json', { cache: 'no-cache' })
         setText('.home-hero h1', data.headline);
 setText('.home-hero .lead', data.intro);
         setText('.two h2', data.welcome_heading); setText('.two p', data.welcome_text);
-        setImage('.hero-image', data.hero_image); setImage('.feature-img', data.welcome_image);
+        // Homepage collage photographs
+setImage('.home-collage img:nth-child(1)', data.collage_left);
+setImage('.home-collage img:nth-child(2)', data.collage_top_right);
+setImage('.home-collage img:nth-child(3)', data.collage_bottom_right);
+
+// Welcome section photograph
+setImage('.home-intro img', data.welcome_image);
         const cards = document.querySelectorAll('.card');
         fetch('/sydney-moyo-website/research.json').then(r => r.json()).then(research => {
           (research.items || []).slice(0, 3).forEach((item, i) => {
