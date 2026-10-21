@@ -25,7 +25,7 @@
       "role": "Ph.D. Student | Mercury Contaminant Transfer & Science Communication",
       "group": "Graduate Students",
       "bio": "Sarah's research examines the transfer of mercury from aquatic to terrestrial ecosystems, with a focus on mercury accumulation in arachnids. She is also interested in scientific communication and making ecological research accessible to broader audiences.",
-      "image": "",
+      "image": "/images/sarah-kerr-1.jpeg",
       "url": ""
     },
     {
@@ -91,6 +91,13 @@
       "bio": "Eduardo was part of our fatty-acid team! He contributed to laboratory research by preparing biological samples and conducting fatty-acid extractions, helping us investigate food webs and resource use across ecosystems.",
       "image": "images/eduardo-howell.png",
       "url": ""
+    },
+    {
+      "name": "Lance Pelletin",
+      "role": "Undergraduate Researcher",
+      "group": "Alumni",
+      "bio": "Lance was our go-to person for building things in the lab. Good with his hands, he built all the emergence traps we use for our field research.",
+      "image": "/images/lance.jpg"
     }
   ]
 }
