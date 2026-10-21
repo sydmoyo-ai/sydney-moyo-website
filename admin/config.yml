@@ -1,10 +1,11 @@
+
 backend:
   name: github
   repo: sydmoyo-ai/sydney-moyo-website
   branch: main
   base_url: https://decap-cms-auth.sydmoyo.workers.dev
   auth_endpoint: auth
-  
+
 media_folder: "images"
 public_folder: "images"
 
@@ -12,6 +13,8 @@ collections:
   - name: "pages"
     label: "Website Pages"
     files:
+
+      # HOMEPAGE
       - label: "Homepage"
         name: "home"
         file: "home.json"
@@ -22,30 +25,10 @@ collections:
           - {label: "Welcome heading", name: "welcome_heading", widget: "string"}
           - {label: "Welcome text", name: "welcome_text", widget: "text"}
           - {label: "Welcome image", name: "welcome_image", widget: "image", required: false}
-      - label: "About"
-        name: "about"
-        file: "about.json"
-        fields:
-          - {label: "Page heading", name: "heading", widget: "string"}
-          - {label: "Page text", name: "body", widget: "text"}
-      - label: "Teaching"
-        name: "teaching"
-        file: "teaching.json"
-        fields:
-          - {label: "Page heading", name: "heading", widget: "string"}
-          - {label: "Page text", name: "body", widget: "text"}
-      - label: "Contact"
-        name: "contact"
-        file: "contact.json"
-        fields:
-          - {label: "Page heading", name: "heading", widget: "string"}
-          - {label: "Page text", name: "body", widget: "text"}
-          - {label: "Contact email", name: "email", widget: "string"}
-  - name: "research"
-    label: "Research Projects"
-    files:
-      - label: "Projects"
-        name: "projects"
+
+      # RESEARCH
+      - label: "Research"
+        name: "research"
         file: "research.json"
         fields:
           - {label: "Page heading", name: "heading", widget: "string"}
@@ -65,11 +48,10 @@ collections:
                   - {label: "Project title", name: "title", widget: "string"}
                   - {label: "Project description", name: "description", widget: "text"}
                   - {label: "Project photograph", name: "image", widget: "image", required: false}
-  - name: "publications"
-    label: "Publications"
-    files:
-      - label: "Publication list"
-        name: "list"
+
+      # PUBLICATIONS
+      - label: "Publications"
+        name: "publications"
         file: "publications.json"
         fields:
           - {label: "Page heading", name: "heading", widget: "string"}
@@ -96,11 +78,10 @@ collections:
                   - {label: "Peer-reviewed article", value: "article"}
                   - {label: "Book chapter or technical report", value: "other"}
                 default: "article"
-  - name: "people"
-    label: "Lab Members"
-    files:
+
+      # PEOPLE
       - label: "People"
-        name: "list"
+        name: "people"
         file: "people.json"
         fields:
           - {label: "Page heading", name: "heading", widget: "string"}
@@ -121,3 +102,19 @@ collections:
               - {label: "Portrait", name: "image", widget: "image", required: false}
               - {label: "Profile URL", name: "url", widget: "string", required: false}
 
+      # TEACHING
+      - label: "Teaching"
+        name: "teaching"
+        file: "teaching.json"
+        fields:
+          - {label: "Page heading", name: "heading", widget: "string"}
+          - {label: "Page text", name: "body", widget: "text"}
+
+      # CONTACT
+      - label: "Contact"
+        name: "contact"
+        file: "contact.json"
+        fields:
+          - {label: "Page heading", name: "heading", widget: "string"}
+          - {label: "Page text", name: "body", widget: "text"}
+          - {label: "Contact email", name: "email", widget: "string"}
