@@ -41,7 +41,7 @@
       "role": "Undergraduate Researcher",
       "group": "Undergraduate Researchers",
       "bio": "",
-      "image": "",
+      "image": "images/ava_shepard.jpg",
       "url": ""
     },
     {
@@ -49,7 +49,7 @@
       "role": "Undergraduate Researcher",
       "group": "Undergraduate Researchers",
       "bio": "",
-      "image": "",
+      "image": "images/addyson_moore.jpeg",
       "url": ""
     },
     {
@@ -57,7 +57,7 @@
       "role": "Undergraduate Researcher",
       "group": "Undergraduate Researchers",
       "bio": "",
-      "image": "",
+      "image": "images/img_3587.jpeg",
       "url": ""
     },
     {
@@ -98,6 +98,11 @@
       "group": "Alumni",
       "bio": "Lance was our go-to person for building things in the lab. Good with his hands, he built all the emergence traps we use for our field research.",
       "image": "images/lance.jpg"
+    },
+    {
+      "name": "Micah Sens",
+      "role": "Undergraduate Researcher",
+      "group": "Undergraduate Researchers"
     }
   ]
 }
