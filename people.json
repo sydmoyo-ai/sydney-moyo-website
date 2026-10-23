@@ -102,7 +102,14 @@
     {
       "name": "Micah Sens",
       "role": "Undergraduate Researcher",
-      "group": "Undergraduate Researchers"
+      "group": "Undergraduate Researchers",
+      "image": "images/micah_sens.jpeg"
+    },
+    {
+      "name": "Isaac Jeon",
+      "role": "Undergraduate Researcher",
+      "group": "Undergraduate Researchers",
+      "image": "images/isaac_jeon.jpg"
     }
   ]
 }
