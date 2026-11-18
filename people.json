@@ -110,6 +110,13 @@
       "role": "Undergraduate Researcher",
       "group": "Undergraduate Researchers",
       "image": "images/isaac_jeon.jpg"
+    },
+    {
+      "name": "Ncumisa Matam",
+      "group": "Graduate Students",
+      "image": "images/headshot.jpeg",
+      "bio": "",
+      "role": "Ncumisa Matama is a visiting student working on inland fisheries, with interests in freshwater ecology, biodiversity conservation, and sustainable fisheries management."
     }
   ]
 }
